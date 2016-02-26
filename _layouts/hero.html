@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+{% include header.html %}
+
+<div class="splash-container">
+
+    <div class="splash content">
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <h1 class="splash-head">Hier wohnt dein Platz.</h1>
+
+                <h2 class="splash-subhead">
+                    Lagerraum. Sicher, clever, 24/7.
+                </h2>
+
+                {% include stores.html %}
+
+            </div>
+
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <img class="placeb-visual" src="/images/placeb-visual2.png">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="content-wrapper">
+    {{ content }}
+
+    {% include footer.html %}
+</div>
+{% include bottom.html %}
+
+</body>
+
+</html>
