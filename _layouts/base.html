@@ -29,19 +29,8 @@ layout: compress
 
 
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script>
-    window.intercomSettings = {
-        app_id: "upu5b2be"
-    };
 
-    $(document).ready(function () {
-        $('.open-chat').on('click', function () {
-            Intercom('show');
-            return false;
-        })
-    });
-
-</script>
+{% javascript main %}
 
 {% if jekyll.environment == "production" %}
 <!-- Google Tag Manager -->
