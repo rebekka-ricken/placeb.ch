@@ -38,3 +38,4 @@ sources:
 sitemap:
     exclude:
         - "/pricing.html"
+        - "/node_modules"

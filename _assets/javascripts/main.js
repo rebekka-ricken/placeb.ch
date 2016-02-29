@@ -36,5 +36,4 @@ $(document).ready(function () {
     if (hash) {
         $('html, body').animate({scrollTop: $(hash).offset().top - 20});
     }
-
 });
