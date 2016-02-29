@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: sitemap.xml
+Sitemap: http://www.placeb.ch/sitemap.xml
