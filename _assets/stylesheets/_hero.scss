@@ -53,6 +53,19 @@
   font-weight: normal;
 }
 
+.key-visual {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  margin-top: -250px;
+  width: 577px;
+  height: 550px;
+  background-image: url(asset_path("placeb-visual@2x.png"));
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 519px 450px;
+}
+
 .content-wrapper {
   position: absolute;
   top: 500px;
@@ -81,7 +94,7 @@
   overflow: hidden;
   border-radius: 50%;
   position: relative;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 4px $f500-green, 0 2px 5px 4px rgba(0,0,0,.2);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px $f500-green, 0 2px 5px 4px rgba(0, 0, 0, .2);
 
   img {
     position: absolute;
@@ -91,7 +104,6 @@
     width: 100px;
     height: 100px;
   }
-
 }
 
 .testimonial-author {

@@ -60,7 +60,7 @@
 
   .splash-container {
     position: relative;
-    height: auto;
+    height: 450px;
     text-align: center;
   }
 
@@ -100,4 +100,25 @@
     margin-top: 50px;
   }
 
+  .key-visual {
+    top: auto;
+    right: auto;
+    left: 50%;
+    margin-top: 0;
+    margin-left: -312px;
+    background-size: 403px 350px;
+    height: 500px;
+    background-image: url(asset_path("placeb-visual.png"));
+  }
+
+  .stores-image {
+    width: 100px;
+  }
+
+}
+
+@media (max-width: 30em) {
+  .key-visual {
+    background-size: 344px 290px;
+  }
 }
