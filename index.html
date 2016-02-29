@@ -55,33 +55,44 @@ layout: hero
             Zum Beispiel:
         </p>
 
-        <div class="pure-g padding-top">
+        <div class="pure-g padding-top" itemscope itemtype="http://schema.org/Offer">
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border">
-                {% img "boxes/1_duschkabine.jpg" alt:"kleine box" class:"box-image" %}
-                <p>1/2-Duschkabine</p>
+                {% img "boxes/1_duschkabine.jpg" alt:"kleine box" class:"box-image" itemprop:"image" %}
+                <p itemprop="name">1/2-Duschkabine</p>
 
                 <p class="dark">ab CHF 39.-/Monat</p>
+
+                <div itemprop="eligibleTransactionVolume" itemscope itemtype="http://schema.org/PriceSpecification">
+                    <meta itemprop="price" content="39.00"/>
+                    <meta itemprop="priceCurrency" content="CHF"/>
+                </div>
             </div>
 
-            <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border">
-                {% img "boxes/12_kleiner_keller.jpg" alt:"mittlere box" class:"box-image" %}
-                <p>Kleiner Keller</p>
+            <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border" itemscope itemtype="http://schema.org/Offer">
+                {% img "boxes/12_kleiner_keller.jpg" alt:"mittlere box" class:"box-image" itemprop:"image" %}
+                <p itemprop="name">Kleiner Keller</p>
 
                 <p class="dark">ab CHF 162.-/Monat</p>
+                <meta itemprop="price" content="39.00"/>
+                <meta itemprop="priceCurrency" content="CHF"/>
             </div>
 
-            <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border">
-                {% img "boxes/23_doppelburo.jpg" alt:"mittlere Lagerraum" class:"box-image" %}
-                <p>Doppelbüro</p>
+            <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border" itemscope itemtype="http://schema.org/Offer">
+                {% img "boxes/23_doppelburo.jpg" alt:"mittlere Lagerraum" class:"box-image" itemprop:"image" %}
+                <p itemprop="name">Doppelbüro</p>
 
                 <p class="dark">ab CHF 305.-/Monat</p>
+                <meta itemprop="price" content="305.00"/>
+                <meta itemprop="priceCurrency" content="CHF"/>
             </div>
 
-            <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border">
-                {% img "boxes/30_wohnzimmer.jpg" alt:"grosser Lagerraum" class:"box-image" %}
-                <p>Wohnzimmer</p>
+            <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border" itemscope itemtype="http://schema.org/Offer">
+                {% img "boxes/30_wohnzimmer.jpg" alt:"grosser Lagerraum" class:"box-image" itemprop:"image" %}
+                <p itemprop="name">Wohnzimmer</p>
 
                 <p class="dark">ab CHF 380.-/Monat</p>
+                <meta itemprop="price" content="380.00"/>
+                <meta itemprop="priceCurrency" content="CHF"/>
             </div>
         </div>
 
@@ -125,42 +136,42 @@ layout: hero
     <h2 class="content-head is-center">Zufriedene Kunden.</h2>
 
     <div class="pure-g is-center padding-top">
-        <div class="l-box pure-u-1 pure-u-md-1-3">
+        <div class="l-box pure-u-1 pure-u-md-1-3" itemscope itemtype="http://schema.org/Review">
             <div class="testimonial-avatar">
-                {% img "testimonials/max-m.jpg" alt:"Avatar"%}
+                {% img "testimonials/max-m.jpg" alt:"Max M." itemprop:"image" %}
             </div>
 
-            <p class="testimonial">
+            <p class="testimonial" itemprop="reviewBody">
                 "Die Leute von placeB haben mir sogar vor Ort die verschiedenen Lagerräume gezeigt,
                 und ich konnte die für mich ideale Grösse auswählen."
             </p>
 
-            <p class="testimonial-author">Max M., Zürich</p>
+            <p class="testimonial-author" itemprop="author">Max M., Zürich</p>
 
         </div>
-        <div class="l-box pure-u-1 pure-u-md-1-3">
+        <div class="l-box pure-u-1 pure-u-md-1-3" itemscope itemtype="http://schema.org/Review">
             <div class="testimonial-avatar">
-                {% img "testimonials/monika-g.jpg" alt:"Avatar"%}
+                {% img "testimonials/monika-g.jpg" alt:"Monika G." itemprop:"image" %}
             </div>
 
-            <p class="testimonial">
+            <p class="testimonial" itemprop="reviewBody">
                 "Schnell und unkompliziert habe ich bei placeB eine Lösung für ein altes Möbelstück gefunden,
                 das mir am Herzen liegt, bei uns aber keinen Platz mehr hat."
             </p>
 
-            <p class="testimonial-author">Monika G., Sempach</p>
+            <p class="testimonial-author" itemprop="author">Monika G., Sempach</p>
         </div>
-        <div class="l-box pure-u-1 pure-u-md-1-3">
+        <div class="l-box pure-u-1 pure-u-md-1-3" itemscope itemtype="http://schema.org/Review">
             <div class="testimonial-avatar">
-                {% img "testimonials/josef-arnold.jpg" alt:"Avatar"%}
+                {% img "testimonials/josef-arnold.jpg" alt:"Josef Arnold" itemprop:"image" %}
             </div>
 
-            <p class="testimonial">
+            <p class="testimonial" itemprop="reviewBody">
                 "Wir haben unser Verpackungsmaterial bei placeB zwischengelagert.
                 Mich hat die Einfachheit und der schlüssellose Zugang über die App auf dem Mobiltelefon überzeugt."
             </p>
 
-            <p class="testimonial-author">Josef Arnold, CEO und Mitinhaber Dumet AG</p>
+            <p class="testimonial-author" itemprop="author">Josef Arnold, CEO und Mitinhaber Dumet AG</p>
         </div>
     </div>
 </div>
