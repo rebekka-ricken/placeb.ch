@@ -27,7 +27,8 @@ $green: #82aa23;
 $light-green: #afc378;
 $f500-green: #5ba136;
 
-$dark-green: #3c763d;
+$dark-green: rgb(60, 118, 61);
+//darken($f500-green, 15%);
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -43,7 +44,10 @@ $dark-green: #3c763d;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base",
-"layout",
-"font",
-"hero";
+@import "vendors/pure-min";
+@import "vendors/grids-responsive-min";
+@import "base";
+@import "layout";
+@import "font";
+@import "hero";
+@import "media";

@@ -13,10 +13,8 @@ layout: compress
     <meta name="description"
           content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-    <link rel="stylesheet" href="/node_modules/purecss/build/pure-min.css">
-    <link rel="stylesheet" href="/node_modules/purecss/build/grids-responsive-min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
 
     {% stylesheet main %}
 
@@ -27,8 +25,7 @@ layout: compress
 
 {{ content }}
 
-
-<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 {% javascript main %}
 
