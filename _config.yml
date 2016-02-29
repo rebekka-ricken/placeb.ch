@@ -12,11 +12,24 @@ description: > # this means to ignore newlines until "baseurl:"
   Die Lagerlösung in deiner Nähe - Selfstorage online,
   rund um die Uhr und in individuellen trockenen und geheizten Boxen - das ist placeB.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://www.placeb.ch" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
 gems:
 - jekyll-assets
+
+sass:
+    style: compressed
+
+exclude: ["deploy"]
+
+assets:
+  features:
+    automatic_img_size: false
+  compress:
+    css:  sass
+    js:   uglifier
+
+sources:
+  - "_assets/folder"

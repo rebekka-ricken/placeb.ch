@@ -1,0 +1,171 @@
+
+.hiw-image-download {
+  height: 100px;
+}
+
+.hiw-image-choose {
+  height: 100px;
+}
+
+.hiw-image-use {
+  height: 100px;
+}
+
+.hiw-image-arrow {
+  margin-top: 50px;
+}
+
+.splash-container {
+  z-index: 1;
+  width: 100%;
+  height: 500px;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  background-color: #5ba136;
+  //background: radial-gradient(circle farthest-corner at right bottom, #afc378 0, #82aa23 28%, #5ba136 79%, #3c763d 100%);
+
+  background: radial-gradient(circle farthest-corner at right bottom, #afc378 0, #82aa23 28%, #5ba136 79%, #3c763d 100%);
+  overflow: hidden;
+  color: white;
+}
+
+.splash {
+  height: 50%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  bottom: 140px;
+  right: 0;
+}
+
+.splash-head {
+  color: #fff;
+  margin: 0;
+  font-weight: 400;
+  margin-top: 75px;
+}
+
+.splash-subhead {
+  font-size: 2em;
+  line-height: 1.4em;
+  color: #fff;
+  color: hsla(0, 0%, 100%, .8);
+  margin: 0em 0 1em;
+  width: 96%;
+  font-weight: normal;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 500px;
+  width: 100%;
+  min-height: 12%;
+  background: white;
+  z-index: 2;
+}
+
+.placeb-visual {
+  max-width: 100%;
+}
+
+.testimonial {
+  font-style: italic;
+  color: #89888e;
+  line-height: 1.38;
+  padding: 0px 15px;
+  //font-size: 1.5em;
+}
+
+.testimonial-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0px auto 25px auto;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+.testimonial-author {
+  padding-top: 30px;
+}
+
+.box-size {
+  padding: 5px 0;
+  background-color: white;
+
+  &.box-border {
+    border: 1px solid #ebebed;
+    border-right: none;
+  }
+}
+
+.box-image {
+  height: 100px;
+}
+
+.screenshots {
+  max-height: 400px;
+  max-width: 100%;
+}
+
+.screenshots-container {
+  margin-bottom: -5px;
+}
+
+.stars {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  .splash-container {
+    position: relative;
+    height: auto;
+    text-align: center;
+  }
+
+  .splash {
+    position: relative;
+    bottom: 0px;
+    margin-top: 40px;
+  }
+
+  .content-wrapper {
+    position: relative;
+    height: auto;
+    top: 0px;
+  }
+
+  .placeb-visual {
+    max-width: 80%;
+  }
+
+  .hiw-image-arrow {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1280px) {
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+

@@ -1,0 +1,157 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+}
+
+.pure-g [class *="pure-u"] {
+  font-family: $base-font-family;
+}
+
+image {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+p {
+  margin: 0
+}
+
+h1, h2, h3, h4, h5, h6, .dark {
+  color: $black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+}
+
+.is-center {
+  text-align: center;
+}
+
+.is-left {
+  text-align: left;
+}
+
+.none-list {
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+/*
+ * -- MENU STYLES --
+ * I want to customize how my .pure-menu looks at the top of the page
+ */
+
+.pure-menu-item {
+  padding: 13px 0 12px;
+}
+
+.home-menu {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 0.5em;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
+}
+
+.pure-menu.pure-menu-fixed {
+  /* Fixed menus normally have a border at the bottom. */
+  border-bottom: none;
+  /* I need a higher z-index here because of the scroll-over effect. */
+  z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+
+  font-weight: 400;
+  font-size: 120%;
+}
+
+.pure-menu-link {
+  padding: 5px 18px;
+}
+
+.home-menu a {
+  color: $grey-color;
+  text-decoration: none;
+}
+
+.home-menu li a:hover,
+.home-menu li a:focus {
+  background: none;
+  border: none;
+  color: $text-color;
+}
+
+.content-head {
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin: 0 0 10px 0;
+  font-size: 2.2em;
+}
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+
+  /* We can align the menu header to the left, but float the
+  menu items to the right. */
+  .home-menu {
+    text-align: left;
+  }
+  .home-menu ul {
+    float: right;
+  }
+
+  /* We increase the height of the splash-container */
+  /*    .splash-container {
+          height: 500px;
+      }*/
+
+  /* We decrease the width of the .splash, since we have more width
+  to work with */
+  .splash {
+    width: 50%;
+    height: 50%;
+  }
+
+  .splash-head {
+    font-size: 250%;
+  }
+
+}
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 78em) {
+  /* We increase the header font size even more */
+  .splash-head {
+    font-size: 300%;
+  }
+}
+
+
+
+
