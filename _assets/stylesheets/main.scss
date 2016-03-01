@@ -47,7 +47,7 @@ $dark-green: $f500-green;//rgb(60, 118, 61);
 @import "vendors/pure-min";
 @import "vendors/grids-responsive-min";
 @import "slick";
-//@import "flipper";
+@import "flipper";
 @import "base";
 @import "layout";
 @import "font";

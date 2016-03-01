@@ -60,71 +60,96 @@ layout: hero
         <div class="pure-g padding-top">
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border" itemscope itemtype="http://schema.org/Offer">
 
-                {% img "boxes/1_duschkabine.jpg" alt:"kleine box" class:"box-image" itemprop:"image" %}
-                <p>1/2-Duschkabine</p>
-                <meta itemprop="name" content="Kleiner Lagerplatz"/>
-
-                <p class="dark">ab CHF 39.-/Monat</p>
-                <meta itemprop="price" content="39.00"/>
-                <meta itemprop="priceCurrency" content="CHF"/>
-
-                <!--
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                <div class="flip-container" id="s-flipper">
                     <div class="flipper">
                         <div class="front">
-                            {% img "boxes/1_duschkabine.jpg" alt:"kleine box" class:"box-image" itemprop:"image" %}
-                            <p>1/2-Duschkabine</p>
+                            {% img "boxes/1_duschkabine.jpg" alt:"kleine box" class:"box-image" itemprop:"image" id:"s-fr-img" %}
+                            <p id="s-fr-name">1/2-Duschkabine</p>
                             <meta itemprop="name" content="Kleiner Lagerplatz"/>
 
-                            <p class="dark">ab CHF 39.-/Monat</p>
+                            <p id="s-fr-price" class="dark">ab CHF 39.-/Monat</p>
                             <meta itemprop="price" content="39.00"/>
                             <meta itemprop="priceCurrency" content="CHF"/>
                         </div>
                         <div class="back">
-                            {% img "boxes/12_kleiner_keller.jpg" alt:"mittlere box" class:"box-image" itemprop:"image" %}
-                            <p>Kleiner Keller</p>
-                            <meta itemprop="name" content="Mittlerer Lagerplatz"/>
-
-                            <p class="dark">ab CHF 162.-/Monat</p>
-                            <meta itemprop="price" content="162.00"/>
-                            <meta itemprop="priceCurrency" content="CHF"/>
+                            <img id="s-bg-img" class="box-image">
+                            <p id="s-bg-name"></p>
+                            <p class="dark" id="s-bg-price"></p>
                         </div>
                     </div>
                 </div>
-                -->
 
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border" itemscope itemtype="http://schema.org/Offer">
-                {% img "boxes/12_kleiner_keller.jpg" alt:"mittlere box" class:"box-image" itemprop:"image" %}
-                <p>Kleiner Keller</p>
-                <meta itemprop="name" content="Mittlerer Lagerplatz"/>
 
-                <p class="dark">ab CHF 162.-/Monat</p>
-                <meta itemprop="price" content="162.00"/>
-                <meta itemprop="priceCurrency" content="CHF"/>
+                <div class="flip-container" id="m-flipper">
+                    <div class="flipper">
+                        <div class="front">
+                            {% img "boxes/9_kleinbus.jpg" alt:"mittlere box" class:"box-image" itemprop:"image" id:"m-fr-img" %}
+                            <p id="m-fr-name">Kleinbus</p>
+                            <meta itemprop="name" content="Mittlerer Lagerplatz"/>
+
+                            <p id="m-fr-price" class="dark">ab CHF 162.-/Monat</p>
+                            <meta itemprop="price" content="162.00"/>
+                            <meta itemprop="priceCurrency" content="CHF"/>
+                        </div>
+                        <div class="back">
+                            <img id="m-bg-img" class="box-image">
+                            <p id="m-bg-name"></p>
+                            <p class="dark" id="m-bg-price"></p>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border" itemscope itemtype="http://schema.org/Offer">
-                {% img "boxes/23_doppelburo.jpg" alt:"mittlere Lagerraum" class:"box-image" itemprop:"image" %}
-                <p>Doppelbüro</p>
-                <meta itemprop="name" content="Grosser Lagerplatz"/>
 
-                <p class="dark">ab CHF 305.-/Monat</p>
-                <meta itemprop="price" content="305.00"/>
-                <meta itemprop="priceCurrency" content="CHF"/>
+                <div class="flip-container" id="l-flipper">
+                    <div class="flipper">
+                        <div class="front">
+                            {% img "boxes/18_einzelgarage.jpg" alt:"grosse box" class:"box-image" itemprop:"image" id:"l-fr-img" %}
+                            <p id="l-fr-name">Kleinbus</p>
+                            <meta itemprop="name" content="Grosser Lagerplatz"/>
+
+                            <p id="l-fr-price" class="dark">ab CHF 162.-/Monat</p>
+                            <meta itemprop="price" content="162.00"/>
+                            <meta itemprop="priceCurrency" content="CHF"/>
+                        </div>
+                        <div class="back">
+                            <img id="l-bg-img" class="box-image">
+                            <p id="l-bg-name"></p>
+                            <p class="dark" id="l-bg-price"></p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size box-border" itemscope itemtype="http://schema.org/Offer">
-                {% img "boxes/30_wohnzimmer.jpg" alt:"grosser Lagerraum" class:"box-image" itemprop:"image" %}
-                <p>Wohnzimmer</p>
-                <meta itemprop="name" content="Riesiger Lagerplatz"/>
 
-                <p class="dark">ab CHF 380.-/Monat</p>
-                <meta itemprop="price" content="380.00"/>
-                <meta itemprop="priceCurrency" content="CHF"/>
+                <div class="flip-container" id="xl-flipper">
+                    <div class="flipper">
+                        <div class="front">
+                            {% img "boxes/18_einzelgarage.jpg" alt:"grosse box" class:"box-image" itemprop:"image" id:"xl-fr-img" %}
+                            <p id="xl-fr-name">Kleinbus</p>
+                            <meta itemprop="name" content="Riesiger Lagerplatz"/>
+
+                            <p id="xl-fr-price" class="dark">ab CHF 380.-/Monat</p>
+                            <meta itemprop="price" content="380.00"/>
+                            <meta itemprop="priceCurrency" content="CHF"/>
+                        </div>
+                        <div class="back">
+                            <img id="xl-bg-img" class="box-image">
+                            <p id="xl-bg-name"></p>
+                            <p class="dark" id="xl-bg-price"></p>
+                        </div>
+                    </div>
+                </div>
+
+
 
             </div>
         </div>
@@ -171,12 +196,12 @@ layout: hero
     <meta itemprop="reviewCount" content="6"/>
 </div>
 
-<div class="content section" id="kunden">
+<div class="content inner-section" id="kunden">
     <h2 class="content-head is-center">Zufriedene Kunden.</h2>
 
     <div class="is-center padding-top testimonials">
         <div itemprop="review" itemscope itemtype="http://schema.org/Review">
-            <div class="testimonial-avatar">
+            <div class="avatar-frame">
                 {% img "testimonials/max-m.jpg" alt:"Max M." itemprop:"image" %}
             </div>
 
@@ -195,7 +220,7 @@ layout: hero
 
         </div>
         <div itemprop="review" itemscope itemtype="http://schema.org/Review">
-            <div class="testimonial-avatar">
+            <div class="avatar-frame">
                 {% img "testimonials/monika-g.jpg" alt:"Monika G." itemprop:"image" %}
             </div>
 
@@ -215,7 +240,7 @@ layout: hero
         </div>
 
         <div itemprop="review" itemscope itemtype="http://schema.org/Review">
-            <div class="testimonial-avatar">
+            <div class="avatar-frame">
                 {% img "testimonials/josef-arnold.jpg" alt:"Josef Arnold" itemprop:"image" %}
             </div>
 
@@ -234,7 +259,7 @@ layout: hero
         </div>
 
         <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="hide-small">
-            <div class="testimonial-avatar">
+            <div class="avatar-frame">
                 {% img "testimonials/ferdinand-metzler.jpg" alt:"Ferdinand Metzler" itemprop:"image" %}
             </div>
 
@@ -254,7 +279,7 @@ layout: hero
         </div>
 
         <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="hide-small">
-            <div class="testimonial-avatar">
+            <div class="avatar-frame">
                 {% img "testimonials/luke-sigel.jpg" alt:"Josef Arnold" itemprop:"image" %}
             </div>
 
@@ -273,7 +298,7 @@ layout: hero
         </div>
 
         <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="hide-small">
-            <div class="testimonial-avatar">
+            <div class="avatar-frame">
                 {% img "testimonials/louis-portal.jpg" alt:"Josef Arnold" itemprop:"image" %}
             </div>
 

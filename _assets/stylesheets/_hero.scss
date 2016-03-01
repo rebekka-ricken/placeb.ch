@@ -91,27 +91,19 @@
   font-style: italic;
   color: #89888e;
   line-height: 1.38;
-  //font-size: 1.5em;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
-.testimonial-avatar {
+.avatar-frame {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px $f500-green, 0 2px 5px 4px rgba(0, 0, 0, .2);
+  margin: 0px auto 25px auto;
+}
+
+.avatar-frame, .avatar-frame img {
   width: 100px;
   height: 100px;
-  margin: 0px auto 25px auto;
-  overflow: hidden;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
-  position: relative;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 4px $f500-green, 0 2px 5px 4px rgba(0, 0, 0, .2);
-
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-  }
 }
 
 .testimonial-author {
@@ -119,8 +111,9 @@
 }
 
 .box-size {
-  padding: 5px 0;
+  padding: 5px;
   background-color: white;
+  height: 183px;
 
   &.box-border {
     border: 1px solid #ebebed;
