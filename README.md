@@ -1,6 +1,19 @@
 # placeB Website
 
+In action: [placeb.ch](https://www.placeb.ch)
 
+
+install
+
+  bundle install
+
+run 
+  
+  jekyll serve
+    
+build
+
+  JEKYLL_ENV=production jekyll build
 
 Deploy status:
 
