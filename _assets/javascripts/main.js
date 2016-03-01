@@ -38,6 +38,10 @@ var reporting = {
 
     reportIos: function () {
         this.report('user', 'GoAppleStore');
+    },
+
+    reportPhone: function () {
+        this.report('user', 'callPhone');
     }
 };
 
@@ -139,6 +143,10 @@ $(document).ready(function () {
 
     $('.open-ios').on('click', function () {
         reporting.reportIos();
+    });
+
+    $('.call-phone').on('click', function () {
+        reporting.reportPhone();
     });
 
 });
