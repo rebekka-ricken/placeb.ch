@@ -9,14 +9,14 @@ permalink: /pricing/
         <h2 class="content-head">Die richtige Grösse finden</h2>
 
         <p>
-            Weil es kleine und grosse Platzprobleme gibt, gibt es auch kleine und grosse placeBoxen von 1 bis 30m³.
+            <span itemprop="description">Weil es kleine und grosse Platzprobleme gibt, gibt es auch kleine und grosse placeBoxen von 1 bis 30m³.</span>
             <br>
-            Falls Du trotzdem unsicher bist welche place Box die richtige ist beraten wir Dich gerne!
+            Zum Beispiel:
         </p>
 
         <div class="pure-g padding-top">
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-download" src="/images/boxes/1_duschkabine.jpg" alt="kleine box">
+                {% img "boxes/1_duschkabine.jpg" class:"box-image" %}
 
                 <p>Duschkabine</p>
 
@@ -24,8 +24,7 @@ permalink: /pricing/
 
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-choose" src="/images/boxes/3_telekabine.jpg" alt="mittlere box">
-
+                {% img "boxes/3_telekabine.jpg" class:"box-image"%}
                 <p>Telekabine</p>
 
                 <p class="dark">ab CHF 50/Monat</p>
@@ -33,7 +32,7 @@ permalink: /pricing/
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-choose" src="/images/boxes/6_gaste_wc.jpg" alt="mittlere box">
+                {% img "boxes/6_gaste_wc.jpg" class:"box-image" %}
 
                 <p>Gäste WC</p>
 
@@ -42,7 +41,7 @@ permalink: /pricing/
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-use" src="/images/boxes/9_kleinbus.jpg" alt="grosse box">
+                {% img "boxes/9_kleinbus.jpg" class:"box-image" %}
 
                 <p>Kleinbus</p>
 
@@ -54,7 +53,7 @@ permalink: /pricing/
 
         <div class="pure-g padding-top">
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-download" src="/images/boxes/12_kleiner_keller.jpg" alt="kleine box">
+                {% img "boxes/12_kleiner_keller.jpg" class:"box-image" %}
 
                 <p>Kleiner Keller</p>
 
@@ -62,7 +61,7 @@ permalink: /pricing/
 
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-choose" src="/images/boxes/15_transporter.jpg" alt="mittlere box">
+                {% img "boxes/15_transporter.jpg" class:"box-image" %}
 
                 <p>Transporter</p>
 
@@ -71,7 +70,7 @@ permalink: /pricing/
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-choose" src="/images/boxes/18_einzelgarage.jpg" alt="mittlere box">
+                {% img "boxes/18_einzelgarage.jpg" class:"box-image" %}
 
                 <p>Einzelgarage</p>
 
@@ -80,7 +79,7 @@ permalink: /pricing/
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-use" src="/images/boxes/22_kinderzimmer.jpg" alt="grosse box">
+                {% img "boxes/22_kinderzimmer.jpg" class:"box-image" %}
 
                 <p>Kinderzimmer</p>
 
@@ -92,7 +91,7 @@ permalink: /pricing/
 
         <div class="pure-g padding-top">
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-use" src="/images/boxes/23_doppelburo.jpg" alt="grosse box">
+                {% img "boxes/23_doppelburo.jpg" class:"box-image" %}
 
                 <p>Doppelburo</p>
 
@@ -100,7 +99,7 @@ permalink: /pricing/
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-use" src="/images/boxes/26_elternschlafzimmer.jpg" alt="grosse box">
+                {% img "boxes/26_elternschlafzimmer.jpg" class:"box-image" %}
 
                 <p>Elternschlafzimmer</p>
 
@@ -108,7 +107,7 @@ permalink: /pricing/
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-use" src="/images/boxes/30_wohnzimmer.jpg" alt="grosse box">
+                {% img "boxes/30_wohnzimmer.jpg" class:"box-image" %}
 
                 <p>Wohnzimmer</p>
 
@@ -116,7 +115,7 @@ permalink: /pricing/
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-use" src="/images/boxes/33_doppelgarage.jpg" alt="grosse box">
+                {% img "boxes/33_doppelgarage.jpg" class:"box-image" %}
 
                 <p>Doppelgarage</p>
 
@@ -127,7 +126,7 @@ permalink: /pricing/
 
         <div class="pure-g padding-top">
             <div class="l-box pure-u-1 pure-u-md-1-4 box-size ">
-                <img class="hiw-image-use" src="/images/boxes/36_meetingroom.jpg" alt="grosse box">
+                {% img "boxes/36_meetingroom.jpg" class:"box-image" %}
 
                 <p>Meetingroom</p>
 
@@ -135,7 +134,38 @@ permalink: /pricing/
             </div>
         </div>
 
+        <div class="pure-g padding-top is-left">
+            <div class="l-box pure-u-1 pure-u-md-1-2 ">
+                Alle Grössen und Standorte findest du in unserer App:
+                <ul class="none-list">
+                    <li>
+                        <a href="https://itunes.apple.com/us/app/placeb/id1073601192" class="green">
+                            <i class="fa fa-apple"></i> placeB iOS App installieren</a>
+                    </li>
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.kg.placeb" class="green">
+                            <i class="fa fa-android"></i> placeB Android App installieren</a>
+                    </li>
+                </ul>
+            </div>
 
+            <div class="l-box pure-u-1 pure-u-md-1-2">
+                Unsicher, welche placeBox die richtige ist für dich?<br>
+                Wir beraten wir dich gerne!
+                <ul class="none-list">
+                    <li>
+                        <a href="#" class="open-chat green"> <i
+                                class="fa fa-comment"></i>
+                            Live Chat</a>
+                    </li>
+                    <li>
+                        <a href="tel:+41442739191" class="green">
+                            <i class="fa fa-phone"></i> +41 44 273 91 91
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 </div>
