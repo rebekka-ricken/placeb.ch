@@ -31,6 +31,28 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.testimonials').slick({
+        slidesToShow: 3,
+        slidesToScroll: 2,
+
+        // the magic
+        responsive: [{
+        }, {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true
+            }
+
+        }, {
+            breakpoint: 450,
+            settings: "unslick" // destroys slick
+        }]
+
+
+    });
+
     var hash = window.location.hash;
 
     if (hash) {

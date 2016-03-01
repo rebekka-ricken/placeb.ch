@@ -142,15 +142,15 @@ layout: hero
 
 <div itemprop="aggregateRating"
      itemscope itemtype="http://schema.org/AggregateRating">
-    <meta itemprop="ratingValue" content="5"/>
-    <meta itemprop="reviewCount" content="3"/>
+    <meta itemprop="ratingValue" content="4.5"/>
+    <meta itemprop="reviewCount" content="6"/>
 </div>
 
 <div class="content section" id="kunden">
     <h2 class="content-head is-center">Zufriedene Kunden.</h2>
 
-    <div class="pure-g is-center padding-top">
-        <div class="l-box pure-u-1 pure-u-md-1-3" itemprop="review" itemscope itemtype="http://schema.org/Review">
+    <div class="is-center padding-top testimonials">
+        <div itemprop="review" itemscope itemtype="http://schema.org/Review">
             <div class="testimonial-avatar">
                 {% img "testimonials/max-m.jpg" alt:"Max M." itemprop:"image" %}
             </div>
@@ -164,12 +164,12 @@ layout: hero
 
             <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                 <meta itemprop="worstRating" content="1"/>
-                <meta itemprop="ratingValue" content="5"/>
+                <meta itemprop="ratingValue" content="4"/>
                 <meta itemprop="bestRating" content="5"/>
             </div>
 
         </div>
-        <div class="l-box pure-u-1 pure-u-md-1-3" itemprop="review" itemscope itemtype="http://schema.org/Review">
+        <div itemprop="review" itemscope itemtype="http://schema.org/Review">
             <div class="testimonial-avatar">
                 {% img "testimonials/monika-g.jpg" alt:"Monika G." itemprop:"image" %}
             </div>
@@ -188,7 +188,8 @@ layout: hero
             </div>
 
         </div>
-        <div class="l-box pure-u-1 pure-u-md-1-3" itemprop="review" itemscope itemtype="http://schema.org/Review">
+
+        <div itemprop="review" itemscope itemtype="http://schema.org/Review">
             <div class="testimonial-avatar">
                 {% img "testimonials/josef-arnold.jpg" alt:"Josef Arnold" itemprop:"image" %}
             </div>
@@ -202,14 +203,71 @@ layout: hero
 
             <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                 <meta itemprop="worstRating" content="1"/>
+                <meta itemprop="ratingValue" content="5"/>
+                <meta itemprop="bestRating" content="5"/>
+            </div>
+        </div>
+
+        <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="hide-small">
+            <div class="testimonial-avatar">
+                {% img "testimonials/ferdinand-metzler.jpg" alt:"Ferdinand Metzler" itemprop:"image" %}
+            </div>
+
+            <p class="testimonial" itemprop="reviewBody">
+                "Wir konnten unseren Bürodschungel entrümpeln und haben nun eine flexible Lagerlösung
+                für Archiv und überzählige Prospekte in unmittelbarer Nähe unserer Büros."
+            </p>
+
+            <p class="testimonial-author" itemprop="author">Ferdinand Metzler, CEO & Co-Founder Fision AG
+            </p>
+
+            <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                <meta itemprop="worstRating" content="1"/>
                 <meta itemprop="ratingValue" content="4"/>
                 <meta itemprop="bestRating" content="5"/>
             </div>
-
         </div>
+
+        <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="hide-small">
+            <div class="testimonial-avatar">
+                {% img "testimonials/luke-sigel.jpg" alt:"Josef Arnold" itemprop:"image" %}
+            </div>
+
+            <p class="testimonial" itemprop="reviewBody">
+                "Wir lagern unser Eventmaterial bei placeB. Da wir ein kleines Budget haben sind wir auf
+                eine massgeschneiderte Lösung angewiesen. placeB bietet uns dies auf Woche und Kubikmeter genau"
+            </p>
+
+            <p class="testimonial-author" itemprop="author">Luke Sigel, Kulturförderverein bäm.ch</p>
+
+            <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                <meta itemprop="worstRating" content="1"/>
+                <meta itemprop="ratingValue" content="4"/>
+                <meta itemprop="bestRating" content="5"/>
+            </div>
+        </div>
+
+        <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="hide-small">
+            <div class="testimonial-avatar">
+                {% img "testimonials/louis-portal.jpg" alt:"Josef Arnold" itemprop:"image" %}
+            </div>
+
+            <p class="testimonial" itemprop="reviewBody">
+                "Für meinen Job bin ich aus Bordeaux nach Zürich gezogen.
+                Nun wohne ich in einer WG und ein Teil meiner Möbel wohnen bei placeB."
+            </p>
+
+            <p class="testimonial-author" itemprop="author">Louis Portal aus Frankreich</p>
+
+            <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                <meta itemprop="worstRating" content="1"/>
+                <meta itemprop="ratingValue" content="5"/>
+                <meta itemprop="bestRating" content="5"/>
+            </div>
+        </div>
+
     </div>
 </div>
-
 
 <div class="box-bg-section section" id="mobile-app">
 
