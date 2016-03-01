@@ -42,6 +42,10 @@ var reporting = {
 
     reportPhone: function () {
         this.report('user', 'callPhone');
+    },
+
+    openMail: function () {
+        this.report('user', 'openMail');
     }
 };
 
@@ -147,6 +151,10 @@ $(document).ready(function () {
 
     $('.call-phone').on('click', function () {
         reporting.reportPhone();
+    });
+
+    $('.open-mail').on('click', function () {
+        reporting.openMail();
     });
 
 });
