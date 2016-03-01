@@ -18,6 +18,29 @@ var sizes = [
     {"size": "s", "boxes": s_boxes, "current_idx": 0, "current_side": 'fr'}
 ];
 
+var reporting = {
+
+    report: function (eventCategory, eventAction, eventLabel, eventValue) {
+        if (typeof ga !== 'undefined') {
+            ga('send', 'event', eventCategory, eventAction, eventLabel, eventValue);
+        } else {
+            console.info('send', 'event', eventCategory, eventAction, eventLabel, eventValue)
+        }
+    },
+
+    reportLiveChatShow: function () {
+        this.report('user', 'LiveChatShow');
+    },
+
+    reportAndroid: function () {
+        this.report('user', 'GoAndroidStore');
+    },
+
+    reportIos: function () {
+        this.report('user', 'GoAppleStore');
+    }
+};
+
 var flipper = {
 
     flip: function (size, boxes, side, current) {
@@ -29,8 +52,6 @@ var flipper = {
         setTimeout(function () {
             $('#' + size + '-flipper').toggleClass('rotate');
         }, 1000);
-
-
     },
 
     start: function (duration) {
@@ -71,16 +92,16 @@ $(document).ready(function () {
     });
 
     $('.download-app').on('click', function () {
-
         if (isMobile.iOS()) {
+            reporting.reportIos();
             window.location.href = "https://itunes.apple.com/us/app/placeb/id1073601192";
         }
         else if (isMobile.Android()) {
+            reporting.reportAndroid();
             window.location.href = "https://play.google.com/store/apps/details?id=com.kg.placeb";
         } else {
             $('html, body').animate({scrollTop: $('#mobile-app').offset().top - 20});
         }
-
         return false;
     });
 
@@ -107,4 +128,17 @@ $(document).ready(function () {
     if (hash) {
         $('html, body').animate({scrollTop: $(hash).offset().top - 20});
     }
+
+    Intercom('onShow', function () {
+        reporting.reportLiveChatShow();
+    });
+
+    $('.open-android').on('click', function () {
+        reporting.reportAndroid();
+    });
+
+    $('.open-ios').on('click', function () {
+        reporting.reportIos();
+    });
+
 });
