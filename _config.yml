@@ -38,4 +38,4 @@ sources:
 sitemap:
     exclude:
         - "/pricing.html"
-        - "/node_modules"
+        - "/node_modules/uglify/node_modules/grunt/node_modules/js-yaml/examples/sample_document.yaml"
