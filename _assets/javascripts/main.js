@@ -34,8 +34,6 @@ $(document).ready(function () {
     $('.testimonials').slick({
         slidesToShow: 3,
         slidesToScroll: 2,
-
-        // the magic
         responsive: [{
         }, {
             breakpoint: 600,
@@ -44,13 +42,10 @@ $(document).ready(function () {
                 slidesToScroll: 2,
                 dots: true
             }
-
         }, {
             breakpoint: 450,
             settings: "unslick" // destroys slick
         }]
-
-
     });
 
     var hash = window.location.hash;
