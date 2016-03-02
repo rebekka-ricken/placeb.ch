@@ -24,7 +24,7 @@ Das ist unterschiedlich – je nach Standort, Dauer und Grösse. Eine placeBox (
 Es gibt eine Depotgebühr, die abhängig ist von der Grösse der placeBox. Diese Depotgebühr wird deiner Kreditkarte belastet und am Ende wieder gutgeschrieben. Ansonsten gibt es keinerlei Zusatzkosten.
 
 ## Sind meine Sachen versichert?
-Nicht automatisch. Eine Versicherung gegen Diebstahl, Feuer und Wasserschäden ist aber obligatorisch. Du hast zwei Möglichkeiten: Entweder du kontaktierst deine Hausratversicherung oder du versicherst die eingelagerten Gegenstände bei uns. Ein Kreuzchen beim Vertrag genügt. Die Kosten sind mit monatlich 6 Franken pro 100’000 Franken Warenwert eher günstiger als bei einer Hausratversicherung.
+Nicht automatisch. Eine Versicherung gegen Diebstahl, Feuer und Wasserschäden ist aber obligatorisch. Du hast zwei Möglichkeiten: Entweder du kontaktierst deine Hausratversicherung oder du versicherst die eingelagerten Gegenstände bei uns. Ein Kreuzchen beim Vertrag genügt. Die Kosten sind mit monatlich 6 Franken pro 10’000 Franken Warenwert eher günstiger als bei einer Hausratversicherung.
 
 ## Gibt es eine minimale oder maximale Mietdauer?
 Die minimale Mietdauer beträgt 1 Woche. Eine maximale Dauer gibt es nicht. Du kannst einen unbefristeten Vertrag über 12 Monate abschliessen, der sich ohne Kündigung automatisch jeweils um einen Monat verlängert.  Die gute Nachricht ist, dass du weiterhin die Rabattstufe deiner ersten Buchung beibehälst.
