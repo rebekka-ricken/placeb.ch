@@ -34,7 +34,6 @@ assets:
 sources:
   - "_assets/folder"
 
-
 sitemap:
     exclude:
         - "/pricing.html"
