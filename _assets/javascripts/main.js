@@ -45,11 +45,11 @@ window.intercomSettings = {
         },
 
         reportAndroid: function (location) {
-            this.report('AndroidStore', 'click', location);
+            this.report('storeAndroid', 'click', location);
         },
 
         reportIos: function (location) {
-            this.report('AppleStore', 'click', location);
+            this.report('storeApple', 'click', location);
         },
 
         reportPhone: function (location) {
