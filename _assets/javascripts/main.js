@@ -41,27 +41,27 @@ window.intercomSettings = {
         },
 
         reportLiveChatShow: function (location) {
-            this.report('LiveChat', 'click', location);
+            this.report('LiveChat', 'click', location, 1);
         },
 
         reportAndroid: function (location) {
-            this.report('storeAndroid', 'click', location);
+            this.report('storeAndroid', 'click', location, 1);
         },
 
         reportIos: function (location) {
-            this.report('storeApple', 'click', location);
+            this.report('storeApple', 'click', location, 1);
         },
 
         reportPhone: function (location) {
-            this.report('phone', 'click', location);
+            this.report('phone', 'click', location, 1);
         },
 
         reportMail: function (location) {
-            this.report('mail', 'click', location);
+            this.report('mail', 'click', location, 1);
         },
 
         reportFacebook: function (location) {
-            this.report('facebook', 'click', location);
+            this.report('facebook', 'click', location, 1);
         }
     };
 
@@ -152,7 +152,7 @@ window.intercomSettings = {
         }
 
         $(document).on("click", '#intercom-launcher', function () {
-            reporting.reportLiveChatShow('bubble');
+            reporting.reportLiveChatShow('bubble', 1);
         });
 
         $('.open-chat').on('click', function () {
