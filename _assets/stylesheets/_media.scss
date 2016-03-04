@@ -3,6 +3,10 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .hiw-image-use {
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 48em) {
@@ -123,6 +127,10 @@
 
   .hiw {
     max-width: 100%;
+  }
+
+  .hiw-image-use {
+    max-width: 170px;
   }
 
 }

@@ -15,6 +15,12 @@ window.intercomSettings = {
         }
     };
 
+    var openInNewTab = function (url) {
+        var win = window.open(url, '_blank');
+        win.focus();
+    }
+
+
     if (showBoxes) {
         var sizes = [
             {"size": "l", "boxes": l_boxes, "current_idx": 0, "current_side": 'fr'},
@@ -34,24 +40,28 @@ window.intercomSettings = {
             }
         },
 
-        reportLiveChatShow: function () {
-            this.report('user', 'LiveChatShow');
+        reportLiveChatShow: function (location) {
+            this.report('LiveChat', 'click', location);
         },
 
-        reportAndroid: function () {
-            this.report('user', 'GoAndroidStore');
+        reportAndroid: function (location) {
+            this.report('AndroidStore', 'click', location);
         },
 
-        reportIos: function () {
-            this.report('user', 'GoAppleStore');
+        reportIos: function (location) {
+            this.report('AppleStore', 'click', location);
         },
 
-        reportPhone: function () {
-            this.report('user', 'callPhone');
+        reportPhone: function (location) {
+            this.report('phone', 'click', location);
         },
 
-        openMail: function () {
-            this.report('user', 'openMail');
+        reportMail: function (location) {
+            this.report('mail', 'click', location);
+        },
+
+        reportFacebook: function (location) {
+            this.report('facebook', 'click', location);
         }
     };
 
@@ -100,19 +110,15 @@ window.intercomSettings = {
     };
 
     $(document).ready(function () {
-        $('.open-chat').on('click', function () {
-            Intercom('showNewMessage');
-            return false;
-        });
 
         $('.download-app').on('click', function () {
             if (isMobile.iOS()) {
-                reporting.reportIos();
-                window.location.href = "https://itunes.apple.com/us/app/placeb/id1073601192";
+                reporting.reportIos('how-it-works');
+                openInNewTab("https://itunes.apple.com/us/app/placeb/id1073601192");
             }
             else if (isMobile.Android()) {
-                reporting.reportAndroid();
-                window.location.href = "https://play.google.com/store/apps/details?id=com.kg.placeb";
+                reporting.reportAndroid('how-it-works');
+                openInNewTab("https://play.google.com/store/apps/details?id=com.kg.placeb");
             } else {
                 $('html, body').animate({scrollTop: $('#mobile-app').offset().top - 20});
             }
@@ -145,25 +151,36 @@ window.intercomSettings = {
             $('html, body').animate({scrollTop: $(hash).offset().top - 20});
         }
 
-        Intercom('onShow', function () {
-            reporting.reportLiveChatShow();
+        $(document).on("click", '#intercom-launcher', function () {
+            reporting.reportLiveChatShow('bubble');
+        });
+
+        $('.open-chat').on('click', function () {
+            reporting.reportLiveChatShow($(this).data('location'));
+            Intercom('showNewMessage');
+            return false;
         });
 
         $('.open-android').on('click', function () {
-            reporting.reportAndroid();
+            reporting.reportAndroid($(this).data('location'));
         });
 
         $('.open-ios').on('click', function () {
-            reporting.reportIos();
+            reporting.reportIos($(this).data('location'));
         });
 
         $('.call-phone').on('click', function () {
-            reporting.reportPhone();
+            reporting.reportPhone($(this).data('location'));
         });
 
         $('.open-mail').on('click', function () {
-            reporting.openMail();
+            reporting.reportMail($(this).data('location'));
         });
+
+        $('.open-facebook').on('click', function () {
+            reporting.reportFacebook($(this).data('location'));
+        });
+
     });
 
 })();
