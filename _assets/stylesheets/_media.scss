@@ -22,7 +22,7 @@
   }
 }
 
-@media (max-width: 48em) {
+@media (max-width: 767px) {
   .pure-menu-item {
     padding: 0;
   }
@@ -108,7 +108,7 @@
     left: 50%;
     margin-top: 0;
     margin-left: -312px;
-    background-size: 403px 350px;
+    background-size: 357px 310px;
     height: 500px;
     background-image: url(asset_path("placeb-visual.png"));
   }
