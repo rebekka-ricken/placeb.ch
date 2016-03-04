@@ -61,7 +61,7 @@ window.intercomSettings = {
         },
 
         reportFacebook: function (location) {
-            this.report('facebook', 'click', location, 1);
+            this.report('facebook', 'click', location, 0);
         }
     };
 
