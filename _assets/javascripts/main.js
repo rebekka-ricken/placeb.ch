@@ -76,7 +76,7 @@ window.intercomSettings = {
 
     $(document).ready(function () {
 
-        $('.download-app').on('click', function () {
+        $('.download-app').on('click', function (event) {
             if (isMobile.iOS()) {
                 //reporting.reportIos('how-it-works');
                 openInNewTab("https://itunes.apple.com/us/app/placeb/id1073601192");
@@ -87,7 +87,7 @@ window.intercomSettings = {
             } else {
                 $('html, body').animate({scrollTop: $('#mobile-app').offset().top - 20});
             }
-            return false;
+            event.preventDefault();
         });
 
         if (showBoxes) {
@@ -120,9 +120,9 @@ window.intercomSettings = {
         //    reporting.reportLiveChatShow('bubble', 1);
         //});
 
-        $('.open-chat').on('click', function () {
+        $('.open-chat').on('click', function (event) {
             Intercom('showNewMessage');
-            return false;
+            event.preventDefault();
         });
 
     });
