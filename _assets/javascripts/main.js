@@ -18,8 +18,48 @@ window.intercomSettings = {
     var openInNewTab = function (url) {
         var win = window.open(url, '_blank');
         win.focus();
-    }
+    };
 
+    var reporting = {
+
+        report: function (eventCategory, eventAction, eventLabel, eventValue) {
+            if (typeof dataLayer !== 'undefined') {
+                dataLayer.push({
+                    'event': 'GAEvent',
+                    'eventCategory': eventCategory,
+                    'eventAction': eventAction,
+                    'eventLabel': eventLabel,
+                    'eventValue': eventValue
+                });
+            } else {
+                console.info('GAEvent', eventCategory, eventAction, eventLabel, eventValue)
+            }
+        },
+
+        reportLiveChatShow: function (location) {
+            this.report('LiveChat', 'click', location, 1);
+        },
+
+        reportAndroid: function (location) {
+            this.report('storeAndroid', 'click', location, 1);
+        },
+
+        reportIos: function (location) {
+            this.report('storeApple', 'click', location, 1);
+        },
+
+        reportPhone: function (location) {
+            this.report('phone', 'click', location, 1);
+        },
+
+        reportMail: function (location) {
+            this.report('mail', 'click', location, 1);
+        },
+
+        reportFacebook: function (location) {
+            this.report('facebook', 'click', location, 0);
+        }
+    };
 
     if (showBoxes) {
         var sizes = [
@@ -74,15 +114,16 @@ window.intercomSettings = {
         }
     };
 
+
     $(document).ready(function () {
 
         $('.download-app').on('click', function (event) {
             if (isMobile.iOS()) {
-                //reporting.reportIos('how-it-works');
+                reporting.reportIos('how-it-works');
                 openInNewTab("https://itunes.apple.com/us/app/placeb/id1073601192");
             }
             else if (isMobile.Android()) {
-                //reporting.reportAndroid('how-it-works');
+                reporting.reportAndroid('how-it-works');
                 openInNewTab("https://play.google.com/store/apps/details?id=com.kg.placeb");
             } else {
                 $('html, body').animate({scrollTop: $('#mobile-app').offset().top - 20});
@@ -116,14 +157,36 @@ window.intercomSettings = {
             $('html, body').animate({scrollTop: $(hash).offset().top - 20});
         }
 
-        //$(document).on("click", '#intercom-launcher', function () {
-        //    reporting.reportLiveChatShow('bubble', 1);
-        //});
+        $(document).on("click", '#intercom-launcher', function () {
+            reporting.reportLiveChatShow('bubble', 1);
+        });
 
         $('.open-chat').on('click', function (event) {
+            reporting.reportLiveChatShow($(this).data('location'));
             Intercom('showNewMessage');
             event.preventDefault();
         });
+
+        $('.open-android').on('click', function () {
+            reporting.reportAndroid($(this).data('location'));
+        });
+
+        $('.open-ios').on('click', function () {
+            reporting.reportIos($(this).data('location'));
+        });
+
+        $('.call-phone').on('click', function () {
+            reporting.reportPhone($(this).data('location'));
+        });
+
+        $('.open-mail').on('click', function () {
+            reporting.reportMail($(this).data('location'));
+        });
+
+        $('.open-facebook').on('click', function () {
+            reporting.reportFacebook($(this).data('location'));
+        });
+
 
     });
 
