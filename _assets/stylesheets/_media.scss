@@ -56,8 +56,12 @@
     position: static;
   }
 
-  .splash-head {
+  .splash-subhead {
     margin-top: 15px;
+  }
+
+  .splash-head {
+    margin: 0em 0 0.5em;
   }
 
   body {
@@ -139,4 +143,14 @@
   .key-visual {
     background-size: 344px 290px;
   }
+
+  .splash-head {
+    font-size: 1.8em;
+  }
+
+  .splash-subhead {
+    font-size: 1.3em;
+  }
+
+
 }
