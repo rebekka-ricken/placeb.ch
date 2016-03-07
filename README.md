@@ -2,18 +2,40 @@
 
 In action: [placeb.ch](https://www.placeb.ch)
 
-
 install
 
-  bundle install
+```
+bundle install
+```
 
 run 
-  
-  jekyll serve
+
+```
+jekyll serve
+```
     
 build
 
-  JEKYLL_ENV=production jekyll build
+```
+JEKYLL_ENV=production jekyll build
+```
+
+Google Tag Manager
+
+http://www.simoahava.com/analytics/create-a-generic-event-tag/
+
+
+```
+dataLayer.push({
+  'event' : 'GAEvent',
+  'eventCategory' : 'Chat',
+  'eventAction' : 'click',
+  'eventLabel' : 'footer',
+  'eventValue' : undefined
+});
+```
+
+
 
 Deploy status:
 
