@@ -1,9 +1,6 @@
-
-
 (function () {
 
     var showBoxes = (typeof l_boxes !== 'undefined');
-
     var isMobile = {
         Android: function () {
             return /Android/i.test(navigator.userAgent);
@@ -19,7 +16,6 @@
     };
 
     var reporting = {
-
         report: function (eventCategory, eventAction, eventLabel, eventValue) {
             if (typeof dataLayer !== 'undefined') {
                 dataLayer.push({

@@ -12,7 +12,6 @@
   padding: 75px;
 }
 
-
 .inner-section {
   padding: 75px 0;
 }
@@ -43,7 +42,6 @@
   padding-top: 50px;
 }
 
-
 .logo-item {
   float: left;
 }
@@ -56,9 +54,14 @@
   -o-background-size: cover;
   background-size: cover;
 
-  .content-head{
+  .content-head {
     color: white;
   }
+}
+
+.box-hero-bg-section {
+  background-image: url(asset_path("boxes-hero.jpg"));
+  height: 20rem;
 }
 
 .transparent-bg {
