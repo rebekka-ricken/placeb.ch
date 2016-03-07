@@ -1,6 +1,4 @@
-window.intercomSettings = {
-    app_id: "upu5b2be"
-};
+
 
 (function () {
 
