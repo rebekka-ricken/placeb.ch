@@ -16,42 +16,66 @@
     };
 
     var reporting = {
-        report: function (eventCategory, eventAction, eventLabel, eventValue) {
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push({
-                    'event': 'GAEvent',
-                    'eventCategory': eventCategory,
-                    'eventAction': eventAction,
-                    'eventLabel': eventLabel,
-                    'eventValue': eventValue
-                });
+
+        reportFBLead: function (eventCategory, eventAction, eventLabel, eventValue) {
+
+            var params = {
+                'value': eventValue,
+                'currency': 'CHF',
+                'content_name': eventLabel,
+                'content_category': eventCategory
+            };
+
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead',params);
             } else {
-                console.info('GAEvent', eventCategory, eventAction, eventLabel, eventValue)
+                console.info('fbq', 'Lead', params)
+            }
+        },
+
+        reportGA: function (eventCategory, eventAction, eventLabel, eventValue) {
+
+            var params = {
+                'event': 'GAEvent',
+                'eventCategory': eventCategory,
+                'eventAction': eventAction,
+                'eventLabel': eventLabel,
+                'eventValue': eventValue
+            };
+
+            if (typeof dataLayer !== 'undefined') {
+                dataLayer.push(params);
+            } else {
+                console.info(params)
             }
         },
 
         reportLiveChatShow: function (location) {
-            this.report('LiveChat', 'click', location, 1);
+            this.reportGA('LiveChat', 'click', location, 1);
+            this.reportFBLead('LiveChat', location, 1);
         },
 
         reportAndroid: function (location) {
-            this.report('storeAndroid', 'click', location, 1);
+            this.reportGA('storeAndroid', 'click', location, 1);
+            this.reportFBLead('storeAndroid', location, 1);
         },
 
         reportIos: function (location) {
-            this.report('storeApple', 'click', location, 1);
+            this.reportGA('storeApple', 'click', location, 1);
+            this.reportFBLead('storeApple', location, 1);
         },
 
         reportPhone: function (location) {
-            this.report('phone', 'click', location, 1);
+            this.reportGA('phone', 'click', location, 1);
+            this.reportFBLead('phone', location, 1);
         },
 
         reportMail: function (location) {
-            this.report('mail', 'click', location, 1);
+            this.reportGA('mail', 'click', location, 1);
         },
 
         reportFacebook: function (location) {
-            this.report('facebook', 'click', location, 0);
+            this.reportGA('facebook', 'click', location, 0);
         }
     };
 
