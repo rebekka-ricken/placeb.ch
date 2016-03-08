@@ -4,6 +4,7 @@ function initMap() {
         center: {lat: 47.4014464, lng: 8.5178379},
         zoom: 12,
         scrollwheel: false,
+        draggable: !("ontouchend" in document),
         disableDoubleClickZoom: true,
     });
 
