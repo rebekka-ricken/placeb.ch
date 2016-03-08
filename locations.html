@@ -1,6 +1,7 @@
 ---
 layout: content
 permalink: /standorte/
+title: Lagerräume in Zürich
 ---
 
 <div class="hero-container">
@@ -12,17 +13,19 @@ permalink: /standorte/
     <div class="content section section-low-padding">
         <h1 class="is-center">Lagerräume in Zürich</h1>
 
+        <p class="is-center">Wir schaffen mit unseren Lagerräumen den Platz, den es zum Leben braucht</p>
+
         <h2>Hohlstrasse 192</h2>
 
         <div class="pure-g">
             <div class="l-box pure-u-1 pure-u-md-2-5">
-                {% img "locations/hohlstrasse.jpg" alt:"Hohlstrasse" %}
+                {% img "locations/hohlstrasse.jpg" alt:"Hohlstrasse 192" %}
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-3-5">
                 <p class="padding-left">
-                    Dieser Standort liegt zwischen Letzipark und dem Letzigrund-Stadion<br><br>
-                    <a href="#" class="green"><i class="fa fa-location-arrow"></i> Zum Standort navigieren</a>
+                    Dieser Standort liegt in der Hard (Kreis 4) unweit der Hardbrücke.<br><br>
+                    <a target="_blank" href="https://www.google.ch/maps/place/Hohlstrasse+192,+8004+Z%C3%BCrich/@47.3816207,8.5152766,17z/data=!3m1!4b1!4m2!3m1!1s0x47900a3c4cbcf3b1:0x83dcb173f013fb6f?hl=en" class="green"><i class="fa fa-location-arrow"></i> Zum Standort navigieren</a>
                 </p>
             </div>
         </div>
@@ -37,13 +40,12 @@ permalink: /standorte/
                 <div class="l-box pure-u-1 pure-u-md-3-5">
                     <p>
                         Dieser Standort liegt zwischen Letzipark und dem Letzigrund-Stadion<br><br>
-                        <a href="#" class="green"><i class="fa fa-location-arrow"></i> Zum Standort navigieren</a>
+                        <a target="_blank" href="https://www.google.ch/maps/place/Baslerstrasse+30,+8048+Z%C3%BCrich/@47.3849885,8.5003389,17z/data=!3m1!4b1!4m2!3m1!1s0x47900a34101119f7:0x540637039e6d2163?hl=en" class="green"><i class="fa fa-location-arrow"></i> Zum Standort navigieren</a>
                     </p>
-
                 </div>
 
                 <div class="l-box pure-u-1 pure-u-md-2-5">
-                    {% img "locations/baslerstrasse.jpg" alt:"Basler Strasse" class="padding-left" %}
+                    {% img "locations/baslerstrasse.jpg" alt:"Basler Strasse 30" class="padding-left" %}
                 </div>
 
             </div>
@@ -51,17 +53,17 @@ permalink: /standorte/
     </div>
 
     <div class="content section section-low-padding">
-        <h2>Hardturmstrasse</h2>
+        <h2>Hardturmstrasse 175</h2>
 
         <div class="pure-g">
             <div class="l-box pure-u-1 pure-u-md-2-5">
-                {% img "locations/hardturmstrasse.jpg" alt:"Hardturmstrasse" %}
+                {% img "locations/hardturmstrasse.jpg" alt:"Hardturmstrasse 175" %}
             </div>
 
             <div class="l-box pure-u-1 pure-u-md-3-5">
                 <p class="padding-left">
                     Dieser Standort liegt zwischen Letzipark und dem Letzigrund-Stadion<br><br>
-                    <a href="#" class="green"><i class="fa fa-location-arrow"></i> Zum Standort navigieren</a>
+                    <a  target="_blank" href="https://www.google.ch/maps/place/Hardturmstrasse+175,+8005+Z%C3%BCrich/@47.3927275,8.5087459,17z/data=!3m1!4b1!4m2!3m1!1s0x47900a48bb397a99:0x2b287745d5767b46?hl=en" class="green"><i class="fa fa-location-arrow"></i> Zum Standort navigieren</a>
                 </p>
             </div>
         </div>
@@ -76,11 +78,31 @@ permalink: /standorte/
     function initMap() {
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
-            center: {lat: 47.3839428, lng: 8.5392879},
+            center: {lat: 47.4014464, lng: 8.5178379},
             zoom: 12,
             scrollwheel: false,
             disableDoubleClickZoom: true,
         });
+
+        var marker = new google.maps.Marker({
+            position: {lat: 47.3927275, lng: 8.5087459},
+            map: map,
+            title: 'Hardturmstrasse 175'
+        });
+
+        var marker = new google.maps.Marker({
+            position: {lat: 47.3849885, lng: 8.5025329},
+            map: map,
+            title: 'Baslerstrasse 30'
+        });
+
+        var marker = new google.maps.Marker({
+            position: {lat: 47.3814464, lng: 8.5178379},
+            map: map,
+            title: 'Hohlstrasse 192'
+        });
+
+
     }
 </script>
 
