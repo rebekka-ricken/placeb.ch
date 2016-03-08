@@ -15,7 +15,7 @@ body {
   font-family: $base-font-family;
 }
 
-image {
+img {
   max-width: 100%;
   height: auto;
 }
@@ -35,6 +35,11 @@ h1, h2, h3, h4, h5, h6, .dark {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-family;
+}
+
+h1 {
+  font-size: 300%;
+  margin: 0;
 }
 
 .is-center {

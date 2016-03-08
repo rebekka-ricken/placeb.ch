@@ -12,6 +12,9 @@
   padding: 75px;
 }
 
+.section-low-padding {
+  padding: 35px 0px;
+}
 
 .inner-section {
   padding: 75px 0;
@@ -43,7 +46,6 @@
   padding-top: 50px;
 }
 
-
 .logo-item {
   float: left;
 }
@@ -56,9 +58,14 @@
   -o-background-size: cover;
   background-size: cover;
 
-  .content-head{
+  .content-head {
     color: white;
   }
+}
+
+.box-hero-bg-section {
+  background-image: url(asset_path("boxes-hero.jpg"));
+  height: 20rem;
 }
 
 .transparent-bg {
@@ -73,4 +80,41 @@ article.content {
 
 .max-80 {
   max-width: 80%;
+}
+
+.hero-container {
+  z-index: 1;
+  width: 100%;
+  height: 400px;
+  top: 0px;
+  position: fixed;
+  left: 0px;
+}
+
+.hero-title {
+  width: 100%;
+  margin-top: 200px !important;
+  text-align: center;
+}
+
+.box-fact {
+  padding: 0 10px;
+  p {
+    margin: auto;
+    max-width: 400px;
+  }
+
+  .fa {
+    font-size: 50px;
+    color: $dark-green;
+  }
+}
+
+.padding-left {
+  padding-left: 20px;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
 }
