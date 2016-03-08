@@ -16,7 +16,6 @@
   padding: 35px 75px;
 }
 
-
 .inner-section {
   padding: 75px 0;
 }
@@ -81,4 +80,41 @@ article.content {
 
 .max-80 {
   max-width: 80%;
+}
+
+.hero-container {
+  z-index: 1;
+  width: 100%;
+  height: 400px;
+  top: 0px;
+  position: fixed;
+  left: 0px;
+}
+
+.hero-title {
+  width: 100%;
+  margin-top: 200px !important;
+  text-align: center;
+}
+
+.box-fact {
+  padding: 0 10px;
+  p {
+    margin: auto;
+    max-width: 400px;
+  }
+
+  .fa {
+    font-size: 50px;
+    color: $dark-green;
+  }
+}
+
+.padding-left {
+  padding-left: 20px;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
 }

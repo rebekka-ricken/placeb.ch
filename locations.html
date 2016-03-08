@@ -1,0 +1,88 @@
+---
+layout: content
+permalink: /standorte/
+---
+
+<div class="hero-container">
+    <div id="map"></div>
+</div>
+
+<div class="content-wrapper small">
+
+    <div class="content section section-low-padding">
+        <h1 class="is-center">Lagerräume in Zürich</h1>
+
+        <h2>Hohlstrasse 192</h2>
+
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-2-5">
+                {% img "locations/hohlstrasse.jpg" alt:"Hohlstrasse" %}
+            </div>
+
+            <div class="l-box pure-u-1 pure-u-md-3-5">
+                <p class="padding-left">
+                    Dieser Standort liegt zwischen Letzipark und dem Letzigrund-Stadion<br><br>
+                    <a href="#" class="green"><i class="fa fa-location-arrow"></i> Zum Standort navigieren</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="grey-section section section-low-padding">
+        <div class="content">
+            <h2>Baslerstrasse 30</h2>
+
+            <div class="pure-g">
+
+                <div class="l-box pure-u-1 pure-u-md-3-5">
+                    <p>
+                        Dieser Standort liegt zwischen Letzipark und dem Letzigrund-Stadion<br><br>
+                        <a href="#" class="green"><i class="fa fa-location-arrow"></i> Zum Standort navigieren</a>
+                    </p>
+
+                </div>
+
+                <div class="l-box pure-u-1 pure-u-md-2-5">
+                    {% img "locations/baslerstrasse.jpg" alt:"Basler Strasse" class="padding-left" %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="content section section-low-padding">
+        <h2>Hardturmstrasse</h2>
+
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-2-5">
+                {% img "locations/hardturmstrasse.jpg" alt:"Hardturmstrasse" %}
+            </div>
+
+            <div class="l-box pure-u-1 pure-u-md-3-5">
+                <p class="padding-left">
+                    Dieser Standort liegt zwischen Letzipark und dem Letzigrund-Stadion<br><br>
+                    <a href="#" class="green"><i class="fa fa-location-arrow"></i> Zum Standort navigieren</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    {% include app.html %}
+    {% include footer.html %}
+
+</div>
+
+<script>
+    function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 47.3839428, lng: 8.5392879},
+            zoom: 12,
+            scrollwheel: false,
+            disableDoubleClickZoom: true,
+        });
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
