@@ -28,6 +28,7 @@ function initMap() {
         $('html, body').animate({scrollTop: $('#hohlstr').offset().top - 100});
     });
 
+
     var marker3 = new google.maps.Marker({
         position: {lat: 47.3927275, lng: 8.5087459},
         map: map,

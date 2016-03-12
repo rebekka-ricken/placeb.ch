@@ -6,6 +6,11 @@
   margin: 0 auto;
   max-width: 75rem;
   width: 100%;
+
+  &.first {
+    padding-top: 100px;
+  }
+
 }
 
 .section {
@@ -117,4 +122,8 @@ article.content {
 #map {
   width: 100%;
   height: 400px;
+}
+
+.news img {
+  max-height: 300px;
 }
