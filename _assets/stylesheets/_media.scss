@@ -155,6 +155,27 @@
     max-width: 170px;
   }
 
+  article.content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .content.first {
+    padding-top: 10px;
+  }
+
+  .padding-left {
+    padding-left: 0;
+  };
+
+  .item-image {
+    text-align: center;
+  }
+
+  .box-fact {
+    padding-bottom: 30px;
+  }
+
 }
 
 @media (max-width: 768px) {

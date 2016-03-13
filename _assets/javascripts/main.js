@@ -27,7 +27,7 @@
             };
 
             if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead',params);
+                fbq('track', 'Lead', params);
             } else {
                 console.info('fbq', 'Lead', params)
             }
@@ -76,7 +76,12 @@
 
         reportFacebook: function (location) {
             this.reportGA('facebook', 'click', location, 0);
+        },
+
+        reportClick: function (id, location) {
+            this.reportGA(id, 'click', location, 0);
         }
+
     };
 
     if (showBoxes) {
@@ -203,6 +208,11 @@
 
         $('.open-facebook').on('click', function () {
             reporting.reportFacebook($(this).data('location'));
+        });
+
+        $('.track-click').on('click', function () {
+            var element = $(this);
+            reporting.reportClick(element.data('id'), element.data('location'));
         });
 
 

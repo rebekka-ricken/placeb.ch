@@ -1,0 +1,45 @@
+---
+layout: content
+permalink: /news/
+title: Neues von placeB
+---
+
+<div class="news">
+    {% for post in site.news reversed %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+
+    {% if thecycle == 'odd' %}
+    <div class="content section section-low-padding {% if forloop.first == true %}first{% endif %}"
+         itemscope itemtype="http://schema.org/Article">
+
+        {% if forloop.first == true %}
+        <h1 class="is-center page-title">{{page.title}}</h1>
+        {% endif %}
+
+        <h2>
+            <time datetime="{{post.date}}" itemprop="datePublished">{{post.date-display}}</time>
+            - <span itemprop="name">{{ post.title }}</span>
+        </h2>
+        <div itemprop="description">
+            {{ post.content}}
+        </div>
+    </div>
+    {% else %}
+
+    <div class="grey-section section section-low-padding" itemscope itemtype="http://schema.org/Article">
+        <div class="content">
+            <h2>
+                <time datetime="{{post.date}}" itemprop="datePublished">{{post.date-display}}</time>
+                - <span itemprop="name">{{ post.title }}</span>
+            </h2>
+            <div itemprop="description">
+                {{ post.content}}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% include app.html %}
+{% include footer.html %}

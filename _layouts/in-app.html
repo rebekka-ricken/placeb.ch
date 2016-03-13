@@ -1,0 +1,19 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+    {% stylesheet in-app %}
+</head>
+<body>
+
+<div class="content">
+    {{ content }}
+</div>
+
+</body>
+</html>
