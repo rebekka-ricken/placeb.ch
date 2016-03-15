@@ -5,33 +5,27 @@ title: placeB in 60 Sekunden
 ---
 <article class="content">
 
-    <style>
-        .iframe-responsive-wrapper        {
-            position: relative;
+    <script language="JavaScript">
+        function autoResize(id) {
+            var newheight;
+            var newwidth;
+
+            if (document.getElementById) {
+                newheight = document.getElementById(id).contentWindow.document.body.scrollHeight;
+                newwidth = document.getElementById(id).contentWindow.document.body.scrollWidth;
+            }
+
+            document.getElementById(id).height = (newheight) + "px";
+            document.getElementById(id).width = (newwidth) + "px";
         }
-
-        .iframe-responsive-wrapper .iframe-ratio {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .iframe-responsive-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-
-    </style>
-
+        
+    </script>
 
     <div class="content is-center">
         <div class="iframe-responsive-wrapper">
-            <img class="iframe-ratio" src="data:image/gif;base64,R0lGODlhEAAJAIAAAP///wAAACH5BAEAAAAALAAAAAAQAAkAAAIKhI+py+0Po5yUFQA7"/>
-            <iframe src="http://app.placeb.ch" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+            <iframe src="http://app.placeb.ch" width="100%" height="200px" id="iframe1" marginheight="0"
+                    frameborder="0" onLoad="autoResize('iframe1');"></iframe>
         </div>
 
     </div>
