@@ -3,30 +3,10 @@ layout: default
 permalink: /app/
 title: placeB in 60 Sekunden
 ---
+{% javascript iframeResizer.min.js %}
 <article class="content">
-
-    <script language="JavaScript">
-        function autoResize(id) {
-            var newheight;
-            var newwidth;
-
-            if (document.getElementById) {
-                newheight = document.getElementById(id).contentWindow.document.body.scrollHeight;
-                newwidth = document.getElementById(id).contentWindow.document.body.scrollWidth;
-            }
-
-            document.getElementById(id).height = (newheight) + "px";
-            document.getElementById(id).width = (newwidth) + "px";
-        }
-        
-    </script>
-
-    <div class="content is-center">
-        <div class="iframe-responsive-wrapper">
-
-            <iframe src="https://app.placeb.ch" width="100%" height="200px" id="iframe1" marginheight="0"
-                    frameborder="0" onLoad="autoResize('iframe1');"></iframe>
-        </div>
-
-    </div>
+    <style>iframe{width:100%}</style>
+    <iframe src="https://app.placeb.ch" scrolling="no" marginheight="0" frameborder="0" ></iframe>
+    <script>iFrameResize({log:true})</script>
 </article>
+
