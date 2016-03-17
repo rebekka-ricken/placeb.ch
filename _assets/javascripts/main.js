@@ -177,7 +177,11 @@
         var hash = window.location.hash;
 
         if (hash) {
-            $('html, body').animate({scrollTop: $(hash).offset().top - 20});
+            if (hash === '#open-chat') {
+                Intercom('showNewMessage');
+            } else if ($(hash)) {
+                $('html, body').animate({scrollTop: $(hash).offset().top - 20});
+            }
         }
 
         $(document).on("click", '#intercom-launcher', function () {
