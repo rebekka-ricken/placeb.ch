@@ -88,7 +88,27 @@ title: Unsere Standorte für deinen Platz
 
 </div>
 
+<script>
+var locationPin = "{% asset_path 'marker@2x.png' %}";
+</script>
+
 {% javascript locations %}
 
 <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
+
+<!--
+{% asset_path 'plain-boxes/1.jpg' %}
+{% asset_path 'plain-boxes/3.jpg' %}
+{% asset_path 'plain-boxes/6.jpg' %}
+{% asset_path 'plain-boxes/9.jpg' %}
+{% asset_path 'plain-boxes/12.jpg' %}
+{% asset_path 'plain-boxes/15.jpg' %}
+{% asset_path 'plain-boxes/18.jpg' %}
+{% asset_path 'plain-boxes/22.jpg' %}
+{% asset_path 'plain-boxes/23.jpg' %}
+{% asset_path 'plain-boxes/26.jpg' %}
+{% asset_path 'plain-boxes/30.jpg' %}
+{% asset_path 'plain-boxes/33.jpg' %}
+{% asset_path 'plain-boxes/36.jpg' %}
+-->
