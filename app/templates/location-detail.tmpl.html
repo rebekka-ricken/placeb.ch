@@ -1,0 +1,15 @@
+<div class="modal-window" [ngClass]="{'modal-open': location}">
+  <div *ngIf="location && !(reservation || info)">
+    <a href="#" (click)="toggle.emit(location)" class="close-button">&times;</a>
+
+    <div class="relative location-preview">
+      <img src="{{location.imageUrl}}" class="fit location-preview__img" alt="{{location.name}}">
+      <h2 class="absolute white location-preview__headline">{{location.name}}</h2>
+    </div>
+
+    <div class="clearfix location-desc">
+      <h2 class="location-desc__headline">{{ 'aboutLocation' | loc:locale}}</h2>
+      <span>{{location.locationDescription}}</span>
+    </div>
+  </div>
+</div>

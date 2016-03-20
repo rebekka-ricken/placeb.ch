@@ -1,0 +1,27 @@
+<div  class="modal-window" [ngClass]="{'modal-open modal-window--login px4 py3': opened}">
+  <div *ngIf="opened">
+    <a href="#" (click)="toggle.emit(status)" class="" style="display:inline-block;position:absolute;top:0;right:10px;font-size:1.5em;">&times;</a>
+    <form class="" (submit)="login($event)" *ngIf="state === 'login'">
+      <div class="mx-auto">
+        <input class="input modal-window--login__input" [(ngModel)]="credentials.username" (ngModelChange)="change()" type="text" id="username" value="admin@admin.com" placeholder="Email">
+      </div>
+      <div class="mx-auto">
+        <input class="input modal-window--login__input" [(ngModel)]="credentials.password" (ngModelChange)="change()" type="text" id="password" type="password" value="adminpass" placeholder="Password">
+      </div>
+      <p class="py2 error-message" *ngIf="errors.length" style="margin-top: 0;">
+        {{errors}}
+      </p>
+      <button type="submit" [disabled]="!credentials.username || !credentials.password" class="btn btn-green--auth right">{{ 'login' | loc:locale}}</button>
+      <a href="#" (click)="state = 'restore';" style="color:#99B749">{{ 'forgotPassword' | loc:locale}}</a>
+    </form>
+    <form (submit)="restorePassword($event)" *ngIf="state === 'restore' ">
+      <div class="mx-auto">
+        <input class="input modal-window--login__input" [(ngModel)]="credentials.email" (ngModelChange)="changeReset()" type="email"  placeholder="Email">
+        <p class="error-message" *ngIf="resetError.length" style="margin-top:0;">{{resetError}}</p>
+      </div>
+      <button type="submit" class="btn btn-green--auth right">Reset</button>
+      <a href="#" (click)="state = 'login'" style="color:#99B749;">Back to login</a>
+    </form>
+
+  </div>
+</div>

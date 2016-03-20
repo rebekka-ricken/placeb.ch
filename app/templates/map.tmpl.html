@@ -1,0 +1,98 @@
+<div class="page">
+    <sebm-google-map
+            [latitude]="lat"
+            [longitude]="lng"
+            [zoom]="zoom"
+            (mapClick)="mapClicked($event)">
+
+        <sebm-google-map-marker
+                *ngFor="#m of markers"
+                (markerClick)="clickedMarker(m)"
+                [latitude]="m.latitude"
+                [longitude]="m.longitude"
+                [label]="m.label"></sebm-google-map-marker>
+    </sebm-google-map>
+
+    <!-- <button type="button" (click)="reloadMarkers($event)">Reload markers</button> -->
+
+    <location [location]="locationCurrent" [reservation]="reservation" [info]="infoPopupOpened"
+              (toggle)="receiveToggle($event)"></location>
+
+    <reservation [location]="locationCurrent" [reservation]="reservation" (close)="receiveClose($event)"></reservation>
+
+    <info-popup [open]="infoPopupOpened" (toggle)="closeInfo($event)"></info-popup>
+
+    <!-- <login [opened]="authModalOpened" (toggle)="toggleModal($event)"></login> -->
+    <!-- <a href="#" (click)="authModalOpened = true">Login</a> -->
+
+    <div *ngIf="!categoriesFetched && categoriesStartedFetching">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+    <div *ngIf="locationSelected && categoriesFetched && categories && !categories.length" class="mx-auto">
+        <img class="block mx-auto" src="app/assets/bitmap.png" alt="">
+        <p class="center p--bigger">{{ 'noBoxes' | loc:locale}}</p>
+    </div>
+
+    <div class="categories-preview" *ngIf="locationCurrent && categories && categories.length">
+        <nav class="categories-preview__navigation clearfix p2 mt2 mx-auto navigation flex justify-center">
+            <fieldset class="categories-preview__navigation-fieldset mx-auto">
+                <label class="categories-preview__navigation-tab px1 flex-auto center">
+                    <input type="radio" name="category_sizes" [(ngModel)]="categorySelected"
+                           (click)="selectCategory('cat-s')">
+          <span class="categories-preview__navigation-tab__text tab-s relative"
+                [ngClass]="{'categories-preview__navigation-tab__text--active': categorySelected === 'cat-s' }">
+            <!-- <img class="categories-preview__navigation-tab__img" src="app/assets/small-box.png" alt="" /> -->
+          {{ 'Small' | loc:locale}}</span>
+                </label>
+                <label class="categories-preview__navigation-tab px1 flex-auto center">
+                    <input type="radio" name="category_sizes" [(ngModel)]="categorySelected"
+                           (click)="selectCategory('cat-m')">
+          <span class="categories-preview__navigation-tab__text tab-m relative"
+                [ngClass]="{'categories-preview__navigation-tab__text--active': categorySelected === 'cat-m' }">
+          <!-- <img class="categories-preview__navigation-tab__img" src="app/assets/medium-box.png" alt="" /> -->
+          {{ 'Medium' | loc:locale}}</span>
+                </label>
+                <label class="categories-preview__navigation-tab px1 flex-auto center">
+                    <input type="radio" name="category_sizes" [(ngModel)]="categorySelected"
+                           (click)="selectCategory('cat-l')">
+          <span class="categories-preview__navigation-tab__text tab-l relative"
+                [ngClass]="{'categories-preview__navigation-tab__text--active': categorySelected === 'cat-l' }">
+          <!-- <img class="categories-preview__navigation-tab__img" src="app/assets/large-box.png" alt="" /> -->
+          {{ 'Large' | loc:locale}}</span>
+                </label>
+            </fieldset>
+        </nav>
+        <div class="flex flex-wrap categories {{animationClass}}"> <!-- location-boxes-list -->
+            <div *ngIf="!avAmount" class="mx-auto">
+                <img class="block mx-auto" src="app/assets/bitmap.png" alt="">
+                <p class="center p--bigger">{{ 'noBoxes' | loc:locale}}</p>
+            </div>
+            <div class="mt2 mb2 col-4 categories__item"
+                 *ngFor="#cat of (categories | filter:'sizes':categorySelected); #i = index; #l = last">
+                <div class="mx-auto categories__item-wrapper" style="width: 90%;">
+                    <img class="block mx-auto category-image" *ngIf="cat.imageUrl" src="{{cat.imageUrl}}" alt=""/>
+                    <p class="text-green categories__item-wrapper__headline">
+                        {{cat.title}}
+                    </p>
+                    <p class="categories__item-wrapper__pricing">
+                        {{ 'from' | loc:locale}} {{cat.durations | duration}} CHF/{{ 'month' | loc:locale}}
+                    </p>
+                    <p class="categories__item-wrapper__sizes"> {{cat| boxSize: locale}}
+                    </p>
+                    <button *ngIf="isLoggedIn()" class="btn not-rounded right btn-green"
+                            (click)="openCategory($event, cat)">{{ 'addBox' | loc:locale}}
+                    </button>
+                    <button *ngIf="!isLoggedIn()" class="btn not-rounded right btn-green" (click)="openInfoPopup()">
+                        {{ 'addBox' | loc:locale }}
+                    </button>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
