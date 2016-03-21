@@ -1,0 +1,36 @@
+<style type="text/css">
+    h1 a:visited {
+        color: #54585f !important;
+    }
+    h2 a:visited {
+        color: #54585f !important;
+    }
+    td a:visited {
+        color: #54585f !important;
+    }
+    h1 a:hover {
+        color: #2a2c2f !important;
+    }
+    h2 a:hover {
+        color: #2a2c2f !important;
+    }
+    td a:hover {
+        color: #2a2c2f !important;
+    }
+    @media only screen and (max-width: 495px) {
+        .hide-for-small {
+            display: none !important;
+        }
+    }
+</style>
+<div class="body" style="color: #000; background: #fff; font-family: Helvetica Neue,Arial,sans-serif">
+{% block body %}{% endblock %}
+<div>
+    <img style="width: 200px; height: 84px;" src="{{ absolute_url(asset('bundles/app/img/placeb-logo.jpg')) }}"><br />
+    placeB AG<br />
+    Hafnerstrasse 13<br />
+    CH-8005 Zürich<br />
+    +41 79 634 46 72<br />
+    <a href="http://www.placb.ch" target="_blank">www.placeB.ch</a>
+</div>
+</div>

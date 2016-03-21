@@ -1,0 +1,23 @@
+{% extends "::base-email.html.twig" %}
+
+{% block body %}
+
+    <p>Hello</p>
+
+    <p>
+        Du hast Zugang zu einer placeBox bekommen. Du kannst die Box unter folgendem Link öffnen:
+        <a href="{{ url('link_sharing_show', {'token': sharing.token}) }}">
+            {{ url('link_sharing_show', {'token': sharing.token}) }}
+        </a>
+    </p>
+
+    <p>
+        In case of questions you can contact us any time at <a href="mailto:info@placeb.ch">info@placeb.ch</a>.
+    </p>
+
+    <p>
+        Voluminous regards<br>
+        Your placeB team
+    </p>
+
+{% endblock %}

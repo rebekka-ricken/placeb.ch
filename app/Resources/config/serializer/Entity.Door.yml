@@ -1,0 +1,14 @@
+AppBundle\Entity\Door:
+    properties:
+        address:
+          exclude: true
+        delay:
+          exclude: true
+        checkDate:
+          exclude: true
+        checkStatus:
+          exclude: true
+        created:
+          exclude: true
+        updated:
+          exclude: true

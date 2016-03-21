@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-02-24T10:47:50Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="7aa821e2d50f5bb58dfd6a9ccc1c96666d807afa" resname="location.description">
+        <jms:reference-file line="53">views/LinkSharing/show.html.twig</jms:reference-file>
+        <source>location.description</source>
+        <target><![CDATA[<b>Location desctription:</b>]]></target>
+      </trans-unit>
+      <trans-unit id="82d7cc753aa52545f7e9fbd05782d06afd216e60" resname="location.link">
+        <jms:reference-file line="62">views/LinkSharing/show.html.twig</jms:reference-file>
+        <source>location.link</source>
+        <target>View on Google maps: </target>
+      </trans-unit>
+      <trans-unit id="fe5176afbde37c63eb948cbdfc548fff80505bc4" resname="one_time_sharing.description">
+        <jms:reference-file line="69">views/LinkSharing/show.html.twig</jms:reference-file>
+        <jms:reference-file line="103">views/LinkSharing/show.html.twig</jms:reference-file>
+        <source>one_time_sharing.description</source>
+        <target>One time sharing description</target>
+      </trans-unit>
+      <trans-unit id="32e6f2ecadaf68011494f132461813f609b518ec" resname="one_time_sharing.open.confirm">
+        <jms:reference-file line="14">views/LinkSharing/lock-button.html.twig</jms:reference-file>
+        <source>one_time_sharing.open.confirm</source>
+        <target>You have access to open only one time. Confirm?</target>
+      </trans-unit>
+      <trans-unit id="d09548a2072155ef40f0dbdb9ab02849c967826b" resname="one_time_sharing.revoked">
+        <jms:reference-file line="75">views/LinkSharing/show.html.twig</jms:reference-file>
+        <source>one_time_sharing.revoked</source>
+        <target state="new">You no longer have access to this Box. You opened all doors or access has been revoked</target>
+      </trans-unit>
+      <trans-unit id="4a8a8f1c13c08096d37aec68921536ffd99536fe" resname="page.description">
+        <jms:reference-file line="47">views/LinkSharing/show.html.twig</jms:reference-file>
+        <source>page.description</source>
+        <target>This is page that helps open BOX</target>
+      </trans-unit>
+      <trans-unit id="79a8edfcb21065b597c4c9af8f55ad87fd876fd0" resname="page.title">
+        <jms:reference-file line="3">views/LinkSharing/show.html.twig</jms:reference-file>
+        <source>page.title</source>
+        <target>EN: Shared Reservation</target>
+      </trans-unit>
+      <trans-unit id="431b0e06234aa288715beb9b3c2aa13fdc50d641" resname="period_sharing.description">
+        <jms:reference-file line="84">views/LinkSharing/show.html.twig</jms:reference-file>
+        <source>period_sharing.description</source>
+        <target state="new">DE: Description of period sharing</target>
+      </trans-unit>
+      <trans-unit id="809139cb0f95b4d8d580f7398728840de56aa46d" resname="period_sharing.end_date">
+        <jms:reference-file line="95">views/LinkSharing/show.html.twig</jms:reference-file>
+        <source>period_sharing.end_date</source>
+        <target>Estimated Access Time: </target>
+      </trans-unit>
+      <trans-unit id="c9839d71654bc5b8dd9ba9170b319ba0592c4b5f" resname="period_sharing.revoked">
+        <jms:reference-file line="90">views/LinkSharing/show.html.twig</jms:reference-file>
+        <source>period_sharing.revoked</source>
+        <target>Your access to this Box has been revoked</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

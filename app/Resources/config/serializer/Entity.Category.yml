@@ -1,0 +1,18 @@
+AppBundle\Entity\Category:
+    properties:
+        durations:
+          access_type: public_method
+        translations:
+            exclude: true
+        created:
+            exclude: true
+        updated:
+            exclude: true
+        filesystemMapId:
+            exclude: true
+        storagePath:
+            exclude: true
+        size:
+            exclude: true
+        imageFile:
+            exclude: true

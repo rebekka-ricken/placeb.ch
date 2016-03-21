@@ -1,0 +1,235 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+    - { resource: config_sonata.yml }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: en # Change also in User entity default locale
+    locales: [en, de]
+    jms_serializer.serialized_name_annotation_strategy.class: JMS\Serializer\Naming\IdenticalPropertyNamingStrategy
+    date_format: d.m.Y
+
+app:
+    stripe:
+        public_key: "%stripe_public_key%"
+        secret_key: "%stripe_secret_key%"
+    twilio:
+        enabled: false
+        account_sid: ~
+        auth_token: ~
+        from_number: ~
+    sms_monolog:
+        enabled: false
+        phones: %error_event_phone%
+        message: "We have serious error in system! Take a look logs file!"
+    slack_monolog:
+        webhook: "https://hooks.slack.com/services/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"
+        channel: "#test-logs"
+        bot_name: "placeB test"
+
+framework:
+    #esi:             ~
+    translator:      { fallbacks: ["%locale%"] }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+        #assets_version: SomeVersionScheme
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # handler_id set to null will use default session handler from php.ini
+        handler_id:  ~
+    fragments:       ~
+    http_method_override: true
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     "%database_host%"
+        port:     "%database_port%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  UTF8
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #     path:     "%database_path%"
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+        mappings:
+            loggable:
+                type: annotation
+                alias: Gedmo
+                prefix: Gedmo\Loggable\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity"
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    spool:     { type: memory }
+
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+    namespace: Application\Migrations
+    table_name: migration_versions
+    name: Application Migrations
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+    group:
+          group_class: Application\Sonata\UserBundle\Entity\Group
+          group_manager: sonata.user.orm.group_manager
+    service:
+          user_manager: sonata.user.orm.user_manager
+
+fos_oauth_server:
+    db_driver: orm
+    client_class:        AppBundle\Entity\OAuth\Client
+    access_token_class:  AppBundle\Entity\OAuth\AccessToken
+    refresh_token_class: AppBundle\Entity\OAuth\RefreshToken
+    auth_code_class:     AppBundle\Entity\OAuth\AuthCode
+    service:
+        user_provider: fos_user.user_manager
+
+fos_rest:
+    body_listener: true
+    param_fetcher_listener: true
+    view:
+        view_response_listener: true
+        failed_validation: HTTP_BAD_REQUEST
+    routing_loader:
+        default_format: json
+        include_format: false
+    format_listener:
+        rules:
+            - { path: '^/api/v1', priorities: ['json'], fallback_format: json, prefer_extension: true }
+            - { path: '^/', stop: true }
+    serializer:
+      serialize_null: true
+    exception:
+      enabled: true
+      messages:
+          Symfony\Component\HttpKernel\Exception\BadRequestHttpException: true
+          Symfony\Component\HttpKernel\Exception\NotFoundHttpException: true
+          Symfony\Component\HttpKernel\Exception\ConflictHttpException: true
+
+jms_serializer:
+    handlers:
+        datetime:
+            default_format: "c" # ISO8601
+            default_timezone: "UTC"
+    metadata:
+        directories:
+            AppBundle:
+                path: "%kernel.root_dir%/Resources/config/serializer"
+                namespace_prefix: "AppBundle"
+            FOSUserBundle:
+                path: "%kernel.root_dir%/Resources/config/serializer/FOSUB"
+                namespace_prefix: "FOS\\UserBundle"
+
+stof_doctrine_extensions:
+    default_locale: %locale%
+    translation_fallback: true
+    orm:
+        default:
+            timestampable: true
+            loggable: true
+            translatable: true
+
+a2lix_translation_form:
+    locales: %locales%
+    default_required: true
+    manager_registry: doctrine
+    templating: "A2lixTranslationFormBundle::default.html.twig"
+
+knp_gaufrette:
+    adapters:
+        invoice_pdf_local_adapter:
+            local:
+                directory: %kernel.root_dir%/../web/uploads/invoice/pdf
+                create: true
+        location_local_adapter:
+            local:
+                directory: %kernel.root_dir%/../web/uploads/location
+                create: true
+        category_local_adapter:
+            local:
+                directory: %kernel.root_dir%/../web/uploads/category
+                create: true
+    filesystems:
+        invoice_pdf_local_fs:
+            adapter: invoice_pdf_local_adapter
+        location_local_fs:
+            adapter: location_local_adapter
+        category_local_fs:
+            adapter: category_local_adapter
+    stream_wrapper: ~
+
+k_phoen_gaufrette_extras:
+    resolvers:
+        invoice_pdf_local_fs:
+            prefix:
+                path: %base_url%/uploads/invoice/pdf
+        location_local_fs:
+            prefix:
+                path: %base_url%/uploads/location
+        category_local_fs:
+            prefix:
+                path: %base_url%/uploads/category
+
+# Usege: php app/console translation:extract de --config=app
+jms_translation:
+    configs:
+        app:
+            dirs: [%kernel.root_dir%, %kernel.root_dir%/../src]
+            output_dir: %kernel.root_dir%/Resources/translations
+            ignored_domains: [routes]
+            excluded_names: ["*TestCase.php", "*Test.php"]
+            excluded_dirs: [cache, data, logs, AdminBundle]
+            keep: true
+
+nelmio_cors:
+    defaults:
+        allow_credentials: false
+        allow_origin: ['*']
+        allow_headers: ['*']
+        allow_methods: ['*']
+        expose_headers: []
+        max_age: 3600
+        hosts: []
+        origin_regex: false
+    paths:
+        '^/':
+            origin_regex: true
+            allow_origin: ['^http://localhost:3000', '^https?://app.placeb.ch', '^https?://www.placeb.ch', '^https?://www-staging.placeb.ch']
+            allow_headers: ['*']
+            allow_methods: ['POST', 'PUT', 'GET', 'DELETE', 'OPTIONS','PATCH']
+            max_age: 3600

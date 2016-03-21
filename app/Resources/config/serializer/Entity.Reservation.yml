@@ -1,0 +1,12 @@
+AppBundle\Entity\Reservation:
+    properties:
+        durationEntity:
+            exclude: true
+        boxValue:
+            exclude: true
+        includeInsurance:
+            exclude: true
+        manual:
+            exclude: true
+        stripeSubscription:
+            exclude: true

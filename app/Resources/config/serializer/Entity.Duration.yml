@@ -1,0 +1,8 @@
+AppBundle\Entity\Duration:
+    properties:
+        category:
+          exclude: true
+        created:
+          exclude: true
+        updated:
+          exclude: true

@@ -1,0 +1,6 @@
+AppBundle\Entity\LinkSharing:
+    properties:
+        token:
+          exclude: true
+        phoneOrEmail:
+          exclude: true

@@ -1,0 +1,32 @@
+# This file is auto-generated during the composer install
+parameters:
+    base_url: 127.0.0.1
+    database_host: 127.0.0.1
+    database_port: 8889
+    database_name: api_placeb
+    database_user: root
+    database_password: golem
+    database_table_prefix: placeb_
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: ascnascknascklansc
+    stripe_secret_key: sk_test_NPGPkThR46rHqJKOGmXmCxaO
+    stripe_public_key: pk_test_xPC18YtqZ1wf7YPEfE3TMulC
+    tax_percent: 8
+    system_email: info@placeb.ch
+    admin_email: info@placeb.ch
+    long_open_minutes: 5
+    insurance_amount: 6
+    insurance_divider: 10000
+    emergency_number: 41798070993
+    terminate_after_days: 1
+    error_event_emails:
+        - genuch@ukr.net
+        - genuchbol@gmail.com
+    error_event_phone:
+        - 1123312312
+        - 3213123123
+    tutorial_link_en: 'https://www.placeb.ch/en/content/so-geht%%C2%%B4s'
+    tutorial_link_de: 'https://www.placeb.ch/content/so-geht%%C2%%B4s'

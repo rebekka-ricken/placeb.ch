@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-02-15T18:37:28Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="565f034fb262b7b98eb9696fa693aee610ca8766" resname="subject.admin_payment_error">
+        <jms:reference-file line="147">AppBundle/Controller/StripeController.php</jms:reference-file>
+        <source>subject.admin_payment_error</source>
+        <target>Payment error</target>
+      </trans-unit>
+      <trans-unit id="b5f602c32a8a674e27c3ca79e6f0d07c288923e4" resname="subject.box_available">
+        <jms:reference-file line="55">AppBundle/Command/ReservationsProcessingCommand.php</jms:reference-file>
+        <source>subject.box_available</source>
+        <target>Your box is immediately accessible</target>
+      </trans-unit>
+      <trans-unit id="1a5452cf71650d87a36475a584cb66f3c16f1be0" resname="subject.invoice_new">
+        <jms:reference-file line="170">AppBundle/Command/ReservationsProcessingCommand.php</jms:reference-file>
+        <jms:reference-file line="116">AppBundle/Controller/StripeController.php</jms:reference-file>
+        <source>subject.invoice_new</source>
+        <target>Bill to your box</target>
+      </trans-unit>
+      <trans-unit id="45d42da471bf7126aa990f2498aa55957232fe5f" resname="subject.new_reservation">
+        <jms:reference-file line="271">AppBundle/Controller/ReservationController.php</jms:reference-file>
+        <source>subject.new_reservation</source>
+        <target>Reservation of your box</target>
+      </trans-unit>
+      <trans-unit id="eb385eab7c5ffc20f755cce1f829d27fa434da83" resname="subject.new_sharing">
+        <jms:reference-file line="29">AppBundle/Manager/FriendSharingManager.php</jms:reference-file>
+        <jms:reference-file line="66">AppBundle/Manager/FriendSharingManager.php</jms:reference-file>
+        <source>subject.new_sharing</source>
+        <target>New Sharing</target>
+      </trans-unit>
+      <trans-unit id="2cfe7f01022139fbc180f7658ebdff5002858def" resname="subject.registration">
+        <jms:reference-file line="121">AppBundle/Controller/UserController.php</jms:reference-file>
+        <source>subject.registration</source>
+        <target>Welcome at placeB</target>
+      </trans-unit>
+      <trans-unit id="65a5e9ae17c460a7bc5318b736c676277ee4ae47" resname="subject.reservation_canceled">
+        <jms:reference-file line="381">AppBundle/Controller/ReservationController.php</jms:reference-file>
+        <source>subject.reservation_canceled</source>
+        <target>Your order has been canceled</target>
+      </trans-unit>
+      <trans-unit id="7e47eb0757b6680b4aacb45a666bce336cc60607" resname="subject.reservation_payment_failed">
+        <jms:reference-file line="158">AppBundle/Controller/StripeController.php</jms:reference-file>
+        <source>subject.reservation_payment_failed</source>
+        <target>Payment failed</target>
+      </trans-unit>
+      <trans-unit id="ecbc05383bfb2b3275b11b59a6115ac7d4f6b369" resname="subject.reservation_renew">
+        <jms:reference-file line="163">AppBundle/Command/ReservationsProcessingCommand.php</jms:reference-file>
+        <jms:reference-file line="109">AppBundle/Controller/StripeController.php</jms:reference-file>
+        <source>subject.reservation_renew</source>
+        <target>Restore booking</target>
+      </trans-unit>
+      <trans-unit id="d730d9e232dfdd6f6078cd005da70fdabb3c0eb6" resname="subject.reservation_terminated">
+        <jms:reference-file line="88">AppBundle/Command/ReservationsProcessingCommand.php</jms:reference-file>
+        <source>subject.reservation_terminated</source>
+        <target>Your reservation is complete</target>
+      </trans-unit>
+      <trans-unit id="96c1e405f8e79d43119fa9a5af88c91e7f5cae22" resname="subject.resseting_password">
+        <jms:reference-file line="205">AppBundle/Controller/UserController.php</jms:reference-file>
+        <source>subject.resseting_password</source>
+        <target>Reset password</target>
+      </trans-unit>
+      <trans-unit id="a6e050e8466d73b6214b204913708afa79c2f610" resname="subject.revoked_sharing">
+        <jms:reference-file line="129">AppBundle/Manager/FriendSharingManager.php</jms:reference-file>
+        <jms:reference-file line="59">AppBundle/Manager/OneTimeSharingManager.php</jms:reference-file>
+        <jms:reference-file line="59">AppBundle/Manager/PeriodSharingManager.php</jms:reference-file>
+        <source>subject.revoked_sharing</source>
+        <target>Revoked Sharing</target>
+      </trans-unit>
+      <trans-unit id="96c1e405f8e79d43119fa9a5af88c91e7f5ca1232" resname="invoice.filename">
+          <jms:reference-file line="428">AppBundle/Manager/InvoiceManager.php</jms:reference-file>
+          <source>invoice.filename</source>
+          <target>Invoice</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

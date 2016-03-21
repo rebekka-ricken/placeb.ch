@@ -1,0 +1,4 @@
+AppBundle\Entity\Invoice:
+    properties:
+        stripeInvoice:
+            exclude: true

@@ -1,0 +1,14 @@
+{% extends "::base-email.html.twig" %}
+
+{% block body %}
+<p>Hallo {{ reservation.user.firstName }}</p>
+
+<p>Leider ist bei der deiner Bezahlung ein Fehler aufgetreten.</p>
+<p>Sind deine Kreditkartendetails noch aktuell?</p>
+<p>Bei Fragen kannst du dich jederzeit über <a href="mailto:info@placeb.ch">info@placeb.ch</a> melden.</p>
+
+<p>
+    Voluminöse Grüsse<br>
+    Dein placeB Team
+</p>
+{% endblock %}

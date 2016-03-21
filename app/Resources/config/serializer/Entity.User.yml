@@ -1,0 +1,10 @@
+AppBundle\Entity\User:
+    properties:
+        stripeCustomer:
+            exclude: true
+        locale:
+            exclude: true
+        created:
+            exclude: true
+        updated:
+            exclude: true

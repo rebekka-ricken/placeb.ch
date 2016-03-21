@@ -1,0 +1,18 @@
+AppBundle\Entity\Location:
+    properties:
+        doors:
+          exclude: true
+        translations:
+          exclude: true
+        created:
+            exclude: true
+        updated:
+            exclude: true
+        filesystemMapId:
+            exclude: true
+        storagePath:
+            exclude: true
+        size:
+            exclude: true
+        imageFile:
+            exclude: true

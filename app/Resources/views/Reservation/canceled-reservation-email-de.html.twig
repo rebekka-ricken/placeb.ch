@@ -1,0 +1,15 @@
+{% extends "::base-email.html.twig" %}
+
+{% block body %}
+    <p>Hallo {{ reservation.user.firstName }}</p>
+
+    <p>
+        Deine Buchung {{ reservation.id }} bei placeB wurde beendet.
+        Wir hoffen, dass du Freude an der Box hattest.
+    </p>
+    <p>Bei Fragen kannst du dich jederzeit über <a href="mailto:info@placeb.ch">info@placeb.ch</a> melden.</p>
+    <p>
+        Voluminöse Grüsse<br>
+        Dein placeB Team
+    </p>
+{% endblock %}

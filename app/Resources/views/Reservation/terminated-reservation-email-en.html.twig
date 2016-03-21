@@ -1,0 +1,14 @@
+{% extends "::base-email.html.twig" %}
+
+{% block body %}
+    <p>Hello {{ reservation.user.firstName }}</p>
+
+    <p>Your reservation {{ reservation.id }} with placeB is complete.
+        We hope you enjoyed your box.</p>
+    <p>In case of questions, you can contact us any time at <a href="mailto:info@placeb.ch">info@placeb.ch</a>.</p>
+
+    <p>
+        Voluminous regards<br>
+        Your placeB team
+    </p>
+{% endblock %}

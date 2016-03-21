@@ -1,0 +1,16 @@
+{% extends "::base-email.html.twig" %}
+
+{% block body %}
+
+    <p>Hello {{ user.firstName }}</p>
+
+    <p>Welcome in placeB</p>
+
+    <p>We are glad you registered with placeB!</p>
+    <p>In case of questions you can contact us any time at <a href="mailto:info@placeb.ch">info@placeb.ch</a>.</p>
+
+    <p>
+        Voluminous regards<br>
+        Your place B team
+    </p>
+{% endblock %}
