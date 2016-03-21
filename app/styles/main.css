@@ -288,7 +288,6 @@ select, input[type='date'], .input-full[name="boxValue"], input[name="startDate"
 .settings-headline {
     margin-left: 20%;
     color: #99B749;
-    font-family: 'Oxygen', sans-serif;
 }
 
 .settings-input-container {
@@ -338,7 +337,6 @@ select, input[type='date'], .input-full[name="boxValue"], input[name="startDate"
 }
 
 .navigation__tab {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 14px;
     padding-top: 8px;
@@ -830,7 +828,7 @@ input[type='radio'], input[type='checkbox'] {
     }
 
     .categories-preview__navigation-tab__text:before {
-       display: none;
+        display: none;
     }
 
     .categories__item {
