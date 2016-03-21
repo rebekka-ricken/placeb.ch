@@ -1,4 +1,0 @@
-AppBundle\Entity\Sharing:
-    properties:
-        updated:
-          exclude: true

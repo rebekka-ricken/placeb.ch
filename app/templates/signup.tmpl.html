@@ -1,0 +1,58 @@
+<div class="modal-window" [ngClass]="{'modal-open modal-window--login px4 py3': opened}">
+    <div *ngIf="opened">
+        <a href="#" (click)="toggle.emit(status)" class=""
+           style="display:inline-block;position:absolute;top:0;right:10px;font-size:1.5em;">&times;</a>
+
+        <section class="sample-app-content">
+            <form [ngFormModel]="signUpForm" (ngSubmit)="onSubmit(pass.value, passConfirmation.value)">
+
+                <div class="mx-auto">
+                    <input class="input modal-window--login__input"
+                           [ngClass]="{'input-error': (email.dirty && !email.valid) || errors['email'] }" type="text"
+                           ngControl="email" placeholder="{{ 'email' | loc:locale}}">
+                </div>
+
+                <div class="mx-auto">
+                    <input class="input modal-window--login__input"
+                           [ngClass]="{'input-error': (firstName.dirty && !firstName.valid) || errors['firstName'] }"
+                           type="text" ngControl="firstName" placeholder="{{ 'firstName' | loc:locale}}">
+                </div>
+
+                <div class="mx-auto">
+                    <input class="input modal-window--login__input"
+                           [ngClass]="{'input-error': (lastName.dirty && !lastName.valid) || errors['lastName'] }"
+                           type="text" ngControl="lastName" placeholder="{{ 'lastName' | loc:locale}}">
+                </div>
+
+                <div class="mx-auto">
+                    <input class="input modal-window--login__input"
+                           [ngClass]="{'input-error': errors['plainPassword'] }"
+                           #pass type="password" ngControl="plainPassword" placeholder="{{ 'password' | loc:locale}}">
+                </div>
+
+                <div class="mx-auto">
+                    <input class="input modal-window--login__input"
+                           [ngClass]="{'input-error': passwordConfirmation.dirty && (plainPassword.value !== passwordConfirmation.value) || errors['plainPassword'] }"
+                           #passConfirmation ngControl="passwordConfirmation" type="password"
+                           placeholder="{{ 'confirmPassword' | loc:locale}}">
+                </div>
+
+                <label class="reservation-label">
+                    <span class="reservation-label__caption"><a target="_blank"
+                                                                href="{{terms}}">{{ 'termsAgree' | loc:locale}}</a></span>
+                    <input type="checkbox" class="right relative reservation-label-radio"
+                           [(ngModel)]="isAgreed">
+                </label>
+
+                <div *ngIf="validationInfo" class="error-message">
+                    {{validationInfo}}
+                </div>
+
+
+                <button type="submit" [disabled]="!signUpForm.valid || !isAgreed "
+                        class="btn btn-green--auth right mt2">{{ 'signUp' | loc:locale}}
+                </button>
+            </form>
+        </section>
+    </div>
+</div>

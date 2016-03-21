@@ -1,4 +1,0 @@
-AppBundle\Entity\LocationDoor:
-    properties:
-        location:
-          exclude: true

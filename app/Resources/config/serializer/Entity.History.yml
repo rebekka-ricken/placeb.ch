@@ -1,4 +1,0 @@
-AppBundle\Entity\History:
-    properties:
-        reservation:
-          exclude: true
