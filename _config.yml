@@ -41,6 +41,7 @@ sitemap:
     exclude:
         - "/hiw-de.html"
         - "/hiw-en.html"
+        - "/app/"
         - "/node_modules/uglify/node_modules/grunt/node_modules/js-yaml/examples/sample_document.yaml"
 
 link_webapp: false

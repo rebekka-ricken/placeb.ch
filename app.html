@@ -1,57 +1,24 @@
 ---
-layout: blank
 permalink: /app/
 title: Auswählen und buchen
 ---
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <base href="/">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Auswählen und buchen</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- inject:css -->
-    <link rel="stylesheet" href="/api-assets/app/all.css?1459158661799">
-    <!-- endinject -->
+<html>
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<head>
+    {% include head.html %}
+
+    <link rel="stylesheet" href="css/all.css?1459193979008">
 
     <script src="https://js.stripe.com/v2/"></script>
 
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 
-<header class="header">
-    <div class="fixed top-0 left-0 right-0 p2 home-menu">
-        <div class="content">
-            <a href="https://www.placeb.ch" class="logo-item">
-                <img class="logo" alt="placeb-logo"
-                     src="https://www.placeb.ch/assets/placeb-logo-f1d9a54e5d75345e034036ae7dea36cfed352d4864c6aeb207a3de5c4a837024.png">
-            </a>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item">
-                    <a class="call-phone pure-menu-link" href="tel:+41442739191" data-location="header">
-                        <i class="fa fa-phone"></i>
-                        <span itemprop="telephone" content="+41442739191">+41 44 273 91 91</span>
-                    </a>
-                </li>
-                <li class="pure-menu-item">
-                    <a href="#" class="open-chat pure-menu-link" data-location="header"
-                       onclick="Intercom('show'); return">
-                        <i class="fa fa-comment"></i>
-                        <span> Live Chat</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
+{% include header.html %}
 
 <div class="page-content">
-    <h1 class="is-center page-title">Auswählen und buchen</h1>
+    <h1 class="is-center page-title"></h1>
 
     <app>
         <div class="spinner">
@@ -61,106 +28,13 @@ title: Auswählen und buchen
     </app>
 </div>
 
-<footer>
-    <div class="green-section section">
-        <div class="content">
-            Wir sind da, um zu helfen:
-            <div class="clearfix padding-top">
-                <div class="sm-col sm-col-4">
-                    <ul class="none-list">
-                        <li>
-                            <a href="#" class="open-chat white-link" data-location="footer"
-                               onclick="Intercom('show'); return"> <i
-                                    class="fa fa-comment"></i> Live Chat</a>
-                        </li>
-                        <li>
-                            <a class="white-link open-mail" href="mailto:info@placeb.ch" data-location="footer">
-                                <i class="fa fa-envelope"></i>
-                                <span itemprop="email">info@placeb.ch</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="white-link call-phone" href="tel:+41442739191" data-location="footer">
-                                <i class="fa fa-phone"></i>
-                                <span itemprop="telephone" content="+41442739191">+41 44 273 91 91</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="white-link" href="https://www.placeb.ch/faq/">
-                                <i class="fa fa-question-circle"></i> Häufig gestellte Fragen</a>
-                        </li>
-                        <li>
-                            <a class="white-link" href="https://www.placeb.ch/in-60-sekunden/">
-                                <i class="fa fa-clock-o"></i> In 60 Sekunden</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="sm-col sm-col-4">
-                    <ul class="none-list">
-                        <li>
-                            <a href="https://app.placeb.ch" class="white-link open-ios"
-                               data-location="footer">
-                                <i class="fa fa-shopping-cart"></i> Auswählen und buchen</a>
-                        </li>
-                        <li>
-                            <a href="https://www.placeb.ch/standorte/" class="white-link open-ios"
-                               data-location="footer">
-                                <i class="fa fa-map-marker"></i> Standorte</a>
-                        </li>
-                        <li>
-                            <a href="https://www.placeb.ch/lagerraume/"
-                               class="white-link open-android" data-location="footer">
-                                <i class="fa fa-th"></i> Lagerräume</a>
-                        </li>
-                        <li>
-                            <a class="white-link" href="https://www.placeb.ch/pricing/">
-                                <i class="fa fa-check"></i> Preise</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="sm-col sm-col-4">
-                    <ul class="none-list">
-                        <li>
-                            <a href="https://itunes.apple.com/us/app/placeb/id1073601192" class="white-link open-ios"
-                               data-location="footer" target="_blank">
-                                <i class="fa fa-apple"></i> placeB iOS App installieren</a>
-                        </li>
-                        <li>
-                            <a href="https://play.google.com/store/apps/details?id=com.kg.placeb"
-                               class="white-link open-android" data-location="footer" target="_blank">
-                                <i class="fa fa-android"></i> placeB Android App installieren</a>
-                        </li>
-                        <li>
-                            <a href="http://www.facebook.com/placeb.place" class="white-link open-facebook"
-                               data-location="footer"
-                               target="_blank">
-                                <i class="fa fa-facebook-official"></i> placeB auf Facebook</a>
-                        </li>
-                        <li>
-                            <a class="white-link" href="https://www.placeb.ch/news/">
-                                <i class="fa fa-newspaper-o"></i> News</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="dark-grey-section section is-center">
-        <a href="https://www.placeb.ch/impressum">Impressum</a> •
-        <a href="https://www.placeb.ch/tc-de.pdf" target="_blank">AGB</a> •
-        <a href="https://www.placeb.ch/privacy-policy-de.pdf" target="_blank">Datenschutz</a> •
-        © 2016, <span itemprop="name">placeB AG</span>
-    </div>
-</footer>
-
-
 <script>
     // function.name (all IE)
     // Remove once https://github.com/angular/angular/issues/6501 is fixed.
     /*! @source http://stackoverflow.com/questions/6903762/function-name-not-supported-in-ie*/
     if (!Object.hasOwnProperty('name')) {
         Object.defineProperty(Function.prototype, 'name', {
-            get: function() {
+            get: function () {
                 var matches = this.toString().match(/^\s*function\s*((?![0-9])[a-zA-Z0-9_$]*)\s*\(/);
                 var name = matches && matches.length > 1 ? matches[1] : "";
                 // For better performance only parse once, and then cache the
@@ -174,38 +48,20 @@ title: Auswählen und buchen
 
 <script>
     // Fixes undefined module function in SystemJS bundle
-    function module() {}
+    function module() {
+    }
+    function ga() {
+    }
 </script>
 
-<!-- shims:js -->
-<!-- endinject -->
+{% include footer.html %}
 
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+<script src="/api-assets/app/shims.js?1459193979006"></script>
+<script src="/api-assets/app/app.js?1459193979007"></script>
 
-    ga('create', ' UA-62261689-6', 'auto');
-    ga('send', 'pageview');
-</script>
+{% javascript main %}
 
-
-
-<!-- libs:js -->
-<!-- endinject -->
-
-<!-- inject:js -->
-<script src="/api-assets/app/shims.js?1459158661797"></script>
-<script src="/api-assets/app/app.js?1459158661797"></script>
-<!-- endinject -->
+{% include services_bottom.html %}
 
 </body>
 </html>
