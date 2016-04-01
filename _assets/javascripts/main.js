@@ -33,10 +33,10 @@
             }
         },
 
-        reportGA: function (eventCategory, eventAction, eventLabel, eventValue) {
+        reportEvent: function (eventCategory, eventAction, eventLabel, eventValue) {
 
             var params = {
-                'event': 'GAEvent',
+                'event': 'GenericEvent',
                 'eventCategory': eventCategory,
                 'eventAction': eventAction,
                 'eventLabel': eventLabel,
@@ -51,37 +51,36 @@
         },
 
         reportLiveChatShow: function (location) {
-            this.reportGA('LiveChat', 'click', location, 1);
+            this.reportEvent('LiveChat', 'click', location, 1);
             this.reportFBLead('LiveChat', location, 1);
         },
 
         reportAndroid: function (location) {
-            this.reportGA('storeAndroid', 'click', location, 1);
+            this.reportEvent('storeAndroid', 'click', location, 1);
             this.reportFBLead('storeAndroid', location, 1);
         },
 
         reportIos: function (location) {
-            this.reportGA('storeApple', 'click', location, 1);
+            this.reportEvent('storeApple', 'click', location, 1);
             this.reportFBLead('storeApple', location, 1);
         },
 
         reportPhone: function (location) {
-            this.reportGA('phone', 'click', location, 1);
+            this.reportEvent('phone', 'click', location, 1);
             this.reportFBLead('phone', location, 1);
         },
 
         reportMail: function (location) {
-            this.reportGA('mail', 'click', location, 1);
+            this.reportEvent('mail', 'click', location, 1);
         },
 
         reportFacebook: function (location) {
-            this.reportGA('facebook', 'click', location, 0);
+            this.reportEvent('facebook', 'click', location, 0);
         },
 
         reportClick: function (id, location) {
-            this.reportGA(id, 'click', location, 0);
+            this.reportEvent(id, 'click', location, 0);
         }
-
     };
 
     if (showBoxes) {
@@ -218,7 +217,6 @@
             var element = $(this);
             reporting.reportClick(element.data('id'), element.data('location'));
         });
-
 
     });
 
