@@ -50,6 +50,10 @@ h1 {
   text-align: left;
 }
 
+.absolute-header .pure-menu-fixed {
+  position: absolute;
+}
+
 .none-list {
   list-style-type: none;
   padding-left: 0;

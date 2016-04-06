@@ -1,4 +1,5 @@
 ---
+layout: compress
 permalink: /app/
 title: Auswählen und buchen
 ---
@@ -6,22 +7,28 @@ title: Auswählen und buchen
 <html>
 
 <head>
-
     <base href="{{page.permalink}}">
-
     {% include head.html %}
 
     <script src="https://js.stripe.com/v2/"></script>
-    <link href="https://app-staging.placeb.ch/css/app.6bdd280ccdc656a5bb9fedf67671bcba.bundle.css" rel="stylesheet">
+
+
+    {% if jekyll.environment == "production" %}
+    <link href="https://app-staging.placeb.ch/css/app.8594e27f9ac1728eedc098c672ac6d2a.bundle.css" rel="stylesheet">
+    {% else %}
+    <link href="https://app-staging.placeb.ch/css/app.8594e27f9ac1728eedc098c672ac6d2a.bundle.css" rel="stylesheet">
+    {% endif %}
 </head>
 
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 
+<div class="absolute-header">
 {% include header.html %}
+</div>
 
-<div class="page-content">
-    <h1 class="is-center page-title"></h1>
+<div class="page-content content first">
+    <h1 class="is-center page-title">{{page.title}}</h1>
 
     <app>
         <div class="spinner">
@@ -33,8 +40,14 @@ title: Auswählen und buchen
 
 {% include footer.html %}
 
-<script src="https://app-staging.placeb.ch/js/polyfills.eedb633c86b4d0e4df07.bundle.js"></script>
-<script src="https://app-staging.placeb.ch/js/app.5471f636fd800af58584.bundle.js"></script>
+{% if jekyll.environment == "production" %}
+<script src="https://app-staging.placeb.ch/js/polyfills.dc8607847b98b863c06f.bundle.js"></script>
+<script src="https://app-staging.placeb.ch/js/app.e0d1185b2252a988aa3e.bundle.js"></script>
+{% else %}
+<script src="https://app-staging.placeb.ch/js/polyfills.dc8607847b98b863c06f.bundle.js"></script>
+<script src="https://app-staging.placeb.ch/js/app.e0d1185b2252a988aa3e.bundle.js"></script>
+{% endif %}
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>

@@ -43,4 +43,4 @@ sitemap:
         - "/hiw-en.html"
         - "/node_modules/uglify/node_modules/grunt/node_modules/js-yaml/examples/sample_document.yaml"
 
-link_webapp: false
+link_webapp: true
