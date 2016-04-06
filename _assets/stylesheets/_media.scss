@@ -9,6 +9,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .pure-menu-horizontal .pure-menu-item, .pure-menu-horizontal .pure-menu-heading, .pure-menu-horizontal .pure-menu-separator {
+    display: block;
+  }
+}
+
 @media (min-width: 48em) {
 
   .home-menu {

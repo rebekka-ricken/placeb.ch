@@ -8,22 +8,22 @@ title: Auswählen und buchen
 
 <head>
     <base href="{{page.permalink}}">
-    {% include head.html %}
-
-    <script src="https://js.stripe.com/v2/"></script>
-
 
     {% if jekyll.environment == "production" %}
     <link href="https://app-staging.placeb.ch/css/app.8594e27f9ac1728eedc098c672ac6d2a.bundle.css" rel="stylesheet">
     {% else %}
     <link href="https://app-staging.placeb.ch/css/app.8594e27f9ac1728eedc098c672ac6d2a.bundle.css" rel="stylesheet">
     {% endif %}
+
+    {% include head.html %}
+    <script src="https://js.stripe.com/v2/"></script>
+
 </head>
 
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 
-<div class="absolute-header">
+<div class="header-scroll">
 {% include header.html %}
 </div>
 
