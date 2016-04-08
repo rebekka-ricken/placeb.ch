@@ -157,21 +157,23 @@
             flipper.start(2000);
         }
 
-        $('.testimonials').slick({
-            slidesToShow: 3,
-            slidesToScroll: 2,
-            responsive: [{}, {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    dots: true
-                }
-            }, {
-                breakpoint: 450,
-                settings: "unslick" // destroys slick
-            }]
-        });
+        if ($().slick) {
+            $('.testimonials').slick({
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                responsive: [{}, {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        dots: true
+                    }
+                }, {
+                    breakpoint: 450,
+                    settings: "unslick" // destroys slick
+                }]
+            });
+        }
 
         var hash = window.location.hash;
 
