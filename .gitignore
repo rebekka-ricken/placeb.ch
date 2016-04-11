@@ -6,3 +6,4 @@ _site
 .DS_Store
 bower_components
 t.*
+node_modules/
