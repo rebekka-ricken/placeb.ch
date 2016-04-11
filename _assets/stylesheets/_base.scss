@@ -52,13 +52,18 @@ h1 {
 
 .header-scroll {
 
-  .pure-menu-fixed {
-    display: block;
+  .logo-item {
+    float: none;
   }
 
   .pure-menu-horizontal .pure-menu-list {
+    display: block;
+  }
+
+  .pure-menu-fixed {
     position: static;
   }
+
 
 }
 
