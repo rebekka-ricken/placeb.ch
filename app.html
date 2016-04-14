@@ -10,9 +10,9 @@ title: Auswählen und buchen
     <base href="{{page.permalink}}">
 
     {% if jekyll.environment == "production" %}
-    <link href="https://app.placeb.ch/css/app.d479ab3a4bf9b633514da379e84674ea.bundle.css" rel="stylesheet">
+    <link href="https://cdn.placeb.ch/app/prod/css/app.91973e3dd0bc288c9b7162a833f45e30.bundle.css" rel="stylesheet">
     {% else %}
-    <link href="https://app-staging.placeb.ch/css/app.d479ab3a4bf9b633514da379e84674ea.bundle.css" rel="stylesheet">
+    <link href="https://cdn.placeb.ch/app/stage/css/app.91973e3dd0bc288c9b7162a833f45e30.bundle.css" rel="stylesheet">
     {% endif %}
 
     {% include head.html %}
@@ -27,9 +27,7 @@ title: Auswählen und buchen
 {% include header.html %}
 </div>
 
-<div class="page-content content">
-    <h1 class="is-center page-title">{{page.title}}</h1>
-
+<div class="page-content content" style="padding-top: 40px;">
     <app>
         <div class="spinner">
             <div class="double-bounce1"></div>
@@ -41,11 +39,11 @@ title: Auswählen und buchen
 {% include footer.html %}
 
 {% if jekyll.environment == "production" %}
-<script src="https://app.placeb.ch/js/polyfills.4f4d1d2b7c00a3030993.bundle.js"></script>
-<script src="https://app.placeb.ch/js/app.70116f4a89d55b0114ae.bundle.js"></script>
+<script src="https://cdn.placeb.ch/app/prod/js/polyfills.80f39b4858d6ca1e1c02.bundle.js"></script>
+<script src="https://cdn.placeb.ch/app/prod/js/app.7683e95588e7b534d27d.bundle.js"></script>
 {% else %}
-<script src="https://app-staging.placeb.ch/js/polyfills.4f4d1d2b7c00a3030993.bundle.js"></script>
-<script src="https://app-staging.placeb.ch/js/app.70116f4a89d55b0114ae.bundle.js"></script>
+<script src="https://cdn.placeb.ch/app/stage/js/polyfills.c1b47b159ba321eb4da6.bundle.js"></script>
+<script src="https://cdn.placeb.ch/app/stage/js/app.7683e95588e7b534d27d.bundle.js"></script>
 {% endif %}
 
 
