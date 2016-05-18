@@ -64,7 +64,6 @@ h1 {
     position: static;
   }
 
-
 }
 
 .none-list {
@@ -169,4 +168,18 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+}
+
+.label-information {
+  background-color: $f500-green;
+  display: inline;
+  padding: .5em .5em .3em .5em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
 }
