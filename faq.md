@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Häufig gestellte Fragen rund um placeB.
+title: Das Wichtigste rund um placeB
 permalink: /faq/
+excerpt: Was du schon immer über das Einlagern bei placeB wissen wolltest
 ---
 
 ## Was genau ist placeB?
