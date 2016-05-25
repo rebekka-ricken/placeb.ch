@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: /impressum/
+Disallow: /tc-de.pdf
+Disallow: /privacy-policy-de.pdf
 
 Sitemap: http://www.placeb.ch/sitemap.xml
