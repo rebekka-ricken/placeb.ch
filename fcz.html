@@ -1,14 +1,31 @@
 ---
-layout: hero
+layout: base
 ---
-
-<a href="/fcz/">
-    <div class="section is-center section-low-padding fb-blue">
-        <h2 class="content-head">Liebe FCZ-Fans: Hier geht's zum Rabatt-Gutschein ></h2>
+<div class="splash-container non-gradient fb-splash" >
+    <div class="splash content">
+        <div class="pure-g">
+            <div class="key-visual">
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2"></div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <h1 class="splash-head">Liebe FCZ-Fans:<br>
+                    Ihn könnt ihr leider nicht einlagern.<br>
+                    Aber alles andere.
+                </h1>
+                {% include stores.html location="hero" %}
+            </div>
+        </div>
     </div>
-</a>
+</div>
 
-<div class="content section is-center hiw section-low-padding" id="wie-es-funktioniert">
+
+<div class="content-wrapper">
+
+    <div class="section is-center section-low-padding fb-blue">
+        <h2 class="content-head">Buchen und Gutscheincode "FCZ" eingeben. 1 Monat gratis einlagern!</h2>
+    </div>
+
+    <div class="content section is-center hiw section-low-padding" id="wie-es-funktioniert">
     <h2 class="content-head">So funktioniert's.</h2>
 
     <p>Bei <span itemprop="name">placeB</span> steuerst du alles mit deinem Smartphone.<br>
@@ -150,7 +167,7 @@ layout: hero
 
         <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="hide-small">
             <div class="avatar-frame">
-                {% img "testimonials/luke-sigel.jpg" alt:"luke sigel" itemprop:"image" %}
+                {% img "testimonials/luke-sigel.jpg" alt:"Josef Arnold" itemprop:"image" %}
             </div>
 
             <p class="testimonial" itemprop="reviewBody">
@@ -169,7 +186,7 @@ layout: hero
 
         <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="hide-small">
             <div class="avatar-frame">
-                {% img "testimonials/louis-portal.jpg" alt:"louis portal" itemprop:"image" %}
+                {% img "testimonials/louis-portal.jpg" alt:"Josef Arnold" itemprop:"image" %}
             </div>
 
             <p class="testimonial" itemprop="reviewBody">
@@ -187,4 +204,7 @@ layout: hero
         </div>
 
     </div>
+</div>
+
+    {% include footer.html %}
 </div>

@@ -1,0 +1,81 @@
+.fb-blue {
+  background: #005fab;
+  color: white;
+
+  h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.5em
+  }
+
+}
+
+.fb-splash {
+
+  .splash-head {
+    font-size: 2.2em;
+  }
+
+  .key-visual {
+    position: absolute;
+    right: auto;
+    left: 0;
+    top: 50%;
+    margin-top: -250px;
+    width: 440px;
+    height: 515px;
+    background-image: url(asset_path("landing-page/fb-avatar.jpg"));
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 440px 360px;
+  }
+
+}
+
+@media (max-width: 912px) {
+  .fb-splash {
+    .key-visual {
+      background-size: 357px 292px;
+    }
+
+    .splash-head {
+      margin: 1em 0 0.5em;
+      font-size: 1.8em;
+    }
+
+  }
+}
+
+@media (max-width: 912px) {
+  .fb-splash {
+    .splash-head {
+      font-size: 1.6em;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .fb-blue {
+     h2 {
+       font-size: 1.3em;
+     }
+  }
+
+  .fb-splash {
+
+    .splash-head {
+      margin: 1em 0 0.5em;
+    }
+
+    .key-visual {
+      right: auto;
+      left: 50%;
+      top: 88%;
+      margin-top: 0;
+      margin-left: -220px;
+      background-size: 357px 292px;
+      height: 325px;
+    }
+  }
+}

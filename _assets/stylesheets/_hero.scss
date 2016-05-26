@@ -29,7 +29,17 @@
   background: radial-gradient(circle farthest-corner at right bottom, #afc378 0, #82aa23 28%, #5ba136 79%, #3c763d 100%);
   overflow: hidden;
   color: white;
+
+  &.non-gradient {
+    background: none;
+    background-color: rgb(130,170,35);
+
+    .splash-head {
+      white-space: normal;
+    }
+  }
 }
+
 
 .splash {
   height: 50%;
