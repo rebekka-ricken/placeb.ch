@@ -11,11 +11,10 @@ Eigentümerin und Betreiberin dieser Website ist die placeB AG.
 
 placeB AG
 
-Hafnerstrasse 13
+Räffelstrasse 26
 
-8005 Zürich
+CH-8045 Zürich
 
-Schweiz
 
 ## Handelsregister
 
@@ -29,7 +28,7 @@ CHE-445.902.616 MWST.
 
 Email: info@placeb.ch
 
-Telefon: +41 44 273 9191
+Telefon: +41 44 273 91 91
 
 ## Geschäftsführer
 
