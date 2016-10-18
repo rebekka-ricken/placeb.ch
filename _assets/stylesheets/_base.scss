@@ -183,3 +183,60 @@ blockquote p {
   vertical-align: baseline;
   border-radius: .25em;
 }
+
+.pure-button {
+  background-color: #5ba136;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.button-xlarge {
+  font-size: 110%;
+}
+
+.action-buttons {
+  position: absolute;
+  z-index: 9999;
+  .pure-button {
+    margin-bottom: 5px;
+  }
+}
+
+.offer-form {
+  width: 60%;
+  margin: auto;
+
+  input, textarea {
+    width: 100%;
+  }
+}
+
+label {
+  font-weight: bold;
+}
+
+.error {
+  padding: 10px 12px;
+  color: #ba2121;
+  border: 1px solid #ba2121;
+  background-color: rgba(#ba2121, 0.1);
+  border-radius: 4px;
+  display: none;
+}
+
+.success {
+  padding: 10px 12px;
+  color: #5ba136;
+  border: 1px solid #5ba136;
+  border-radius: 4px;
+  background-color: rgba(#5ba136, 0.1);
+  display: none;
+}
+
+input.error, textarea.error {
+  border: 1px solid #ba2121;
+}

@@ -1,0 +1,156 @@
+---
+layout: content
+permalink: /offer/
+title: Offerte per Email anfordern
+excerpt: "Unverbindliche Offerte per Email anfordern"
+---
+
+<div class="box-bg-section box-hero-bg-section hero-container">
+    <div class="section">
+        <div class="transparent-bg">
+
+        </div>
+    </div>
+</div>
+
+<div class="content-wrapper small">
+
+    <div class="section section-low-padding">
+        <div class="content">
+
+            <div class="is-center">
+
+                <h1>{{page.title}}</h1>
+            </div>
+
+            <div class="offer-form">
+                <h2>Gerne lassen wir dir eine unverbindliche Offerte per Email zukommen.</h2>
+
+                <div>
+                    <p class="error" id="offer-error">
+                        Bitte alle Felder ausfüllen
+                    </p>
+
+                    <p class="success" id="offer-success">
+                        Vielen Dank für deine Anfrage! Wir melden uns möglichst schnell bei dir.
+                    </p>
+                </div>
+
+
+                <form class="pure-form pure-form-stacked text-left" id="offer-form">
+                    <fieldset>
+                        <div class="pure-control-group">
+                            <label for="email" class="dark">Email</label>
+                            <input id="email" required type="email" name="email"
+                                   placeholder="Gültige Email-Adresse eingeben">
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="name" class="dark">Vorname, Name</label>
+                            <input id="name" required name="name" type="text">
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="space" class="dark">So viel Platz brauche ich</label>
+
+                            <p>Anhaltspunkt in m2, m3 angeben, oder aufzählen, was eingelagert werden soll.</p>
+
+                        <textarea id="space" required name="space">
+                        </textarea>
+
+                            <p>
+                                Bsp. 6 m2; 10m3; 1 Sofa (3-er), 10 Umzugskartons, 1 Schrank (3 Türen).... oder: Bitte
+                                helft mir, meinen Platzbedarf zu berechnen.
+                            </p>
+                        </div>
+                        <button type="submit" class="pure-button" id="submit-offer">Offerte bestellen</button>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="grey-section section section-low-padding">
+        <div class="content">
+            <h2 class="is-center content-head">Deine Vorteile</h2>
+
+            <div class="pure-g padding-top is-center">
+
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 box-fact">
+                    <div><i class="fa fa-clock-o"></i></div>
+
+                    <h3>Zugriff 24/7</h3>
+
+                    <p>
+                        Du hast jederzeit Zugang zu deinen Sachen.<br>
+                        Rund um die Uhr. Immer.
+                    </p>
+                </div>
+
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 box-fact">
+
+                    <div><i class="fa fa-lock"></i></div>
+
+                    <h3>Schlüsselloser Zugang</h3>
+
+                    <p>Du öffnest alle Türen mit der gratis placeB App auf deinem Smartphone. Cool, sicher und super
+                        einfach.</p>
+
+                </div>
+
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 box-fact">
+                    <div><i class="fa fa-video-camera"></i></div>
+
+                    <h3>Videoüberwacht und alarmgesichert</h3>
+
+                    <p>
+                        Alle unsere Standorte sind videoüberwacht und jede Box ist individuell alarmgesichert.
+                        Sicher
+                        ist sicher.
+                    </p>
+
+                </div>
+
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 box-fact">
+
+                    <div><i class="fa fa-calendar-o"></i></div>
+
+                    <h3>Schon ab einer Woche</h3>
+
+                    <p>Deine Sachen machen bei uns Kurzferien – oder sie wohnen fix bei uns. Ganz wie du willst.</p>
+                </div>
+
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 box-fact">
+                    <div><i class="fa fa-credit-card"></i></div>
+
+                    <h3>Einfache Bezahlung</h3>
+
+                    <p>
+                        Bezahlen kannst du ganz bequem und schnell online mit der Kreditkarte.
+                    </p>
+                </div>
+
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 box-fact">
+                    <div><i class="fa fa-sun-o"></i></div>
+
+                    <h3>Sauber, trocken und geheizt</h3>
+
+                    <p>
+                        Es herrscht ein gutes Klima bei placeB. Darauf kannst du dich verlassen.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% include footer.html %}
+
+</div>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("user_uGycY6zXPXV3Cg4AV7eso");
+    })();
+</script>

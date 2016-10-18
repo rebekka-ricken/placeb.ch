@@ -220,6 +220,40 @@
             reporting.reportClick(element.data('id'), element.data('location'));
         });
 
+        $('#submit-offer').on('click', function (e) {
+            e.preventDefault();
+            if ($('#email').val().length && $('#name').val().length && $('#space').val().length) {
+                $('#submit-offer').html('Offerte bestellen ...');
+                $('#offer-error').hide();
+                $('input,textarea').removeClass('error');
+
+                emailjs.sendForm('default_service', 'offer_form', 'offer-form').then(
+                    function (response) {
+                        $('#offer-success').show();
+                        $('#submit-offer').html('Offerte bestellen');
+                        $('#offer-form').hide();
+
+                        $('html, body').animate({
+                            scrollTop: $("#offer-success").offset().top
+                        }, 200);
+                    },
+                    function (error) {
+                        alert('Fehler beim Absenden');
+                        $('#submit-offer').html('Offerte bestellen');
+
+                        $('html, body').animate({
+                            scrollTop: $("#offer-error").offset().top
+                        }, 200);
+                    });
+            } else {
+                $('#offer-success').hide();
+                $('input,textarea').addClass('error');
+                $('#offer-error').show();
+            }
+
+        });
+
+
     });
 
 })();
