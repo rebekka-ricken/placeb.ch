@@ -34,19 +34,17 @@
         },
 
         reportEvent: function (eventCategory, eventAction, eventLabel, eventValue) {
-
-            var params = {
-                'event': 'GenericEvent',
-                'eventCategory': eventCategory,
-                'eventAction': eventAction,
-                'eventLabel': eventLabel,
-                'eventValue': eventValue
-            };
-
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push(params);
+            
+            if (typeof ga !== 'undefined') {
+                ga('send', 'event', eventCategory, eventAction, eventLabel, eventValue);
             } else {
-                console.info(params)
+                console.info({
+                    'event': 'GenericEvent',
+                    'eventCategory': eventCategory,
+                    'eventAction': eventAction,
+                    'eventLabel': eventLabel,
+                    'eventValue': eventValue
+                })
             }
         },
 
