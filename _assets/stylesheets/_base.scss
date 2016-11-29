@@ -262,5 +262,28 @@ input.error, textarea.error {
   &.blue {
     background: #558ac9;
   }
+}
 
+.lu-splash {
+  margin-top: 85px;
+}
+
+@media (max-width: 767px) {
+  margin-top: 0px;
+}
+
+@media (max-width: 1136px) {
+
+  .lu-splash {
+    text-align: left !important;
+
+    .splash-subhead {
+      text-align: left !important;
+    }
+
+    .splash-head {
+      font-size: 2.2em !important;
+      text-align: left !important;
+    }
+  }
 }

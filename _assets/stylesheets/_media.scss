@@ -103,6 +103,11 @@
     position: relative;
     height: 450px;
     text-align: center;
+
+    &.inherit {
+      height: inherit;
+    }
+
   }
 
   .splash {
@@ -248,6 +253,11 @@
 
   .splash-subhead, h2 {
     font-size: 1.3em;
+  }
+
+
+  .baseline {
+    margin-bottom: 20px;
   }
 
 }
