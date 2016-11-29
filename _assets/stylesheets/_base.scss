@@ -240,3 +240,25 @@ label {
 input.error, textarea.error {
   border: 1px solid #ba2121;
 }
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.lu {
+  background: darken(#d71921, 5%);
+  padding: 5px 0 !important;
+
+  color: white;
+  margin: 0;
+  font-size: 1.1em;
+
+  &.small {
+    font-size: 1.0em;
+  }
+
+  &.blue {
+    background: #558ac9;
+  }
+
+}

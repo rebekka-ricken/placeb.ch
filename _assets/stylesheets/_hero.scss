@@ -32,7 +32,7 @@
 
   &.non-gradient {
     background: none;
-    background-color: rgb(130,170,35);
+    background-color: rgb(130, 170, 35);
 
     .splash-head {
       white-space: normal;
@@ -40,6 +40,10 @@
   }
 }
 
+.gradient {
+  background-color: #5ba136;
+  background: radial-gradient(circle farthest-corner at right bottom, #afc378 0, #82aa23 28%, #5ba136 79%, #3c763d 100%);
+}
 
 .splash {
   height: 50%;
@@ -52,11 +56,15 @@
 
 .splash-head {
   color: #fff;
-  margin: 0;
   font-weight: 400;
   font-size: 2.4em;
   margin: 0em 0 1em;
   white-space: nowrap;
+
+  &.no-margin-bottom {
+    margin-bottom: 0;
+  }
+
 }
 
 .splash-subhead {
@@ -67,6 +75,17 @@
   width: 96%;
   font-weight: normal;
   white-space: nowrap;
+}
+
+.wrap {
+  white-space: normal;
+}
+
+.key-visual-img {
+
+  position: relative;
+  top: 65px;
+
 }
 
 .key-visual {
@@ -92,6 +111,10 @@
 
   &.small {
     top: 400px;
+  }
+
+  &.interrupter {
+    top: 450px;
   }
 
 }

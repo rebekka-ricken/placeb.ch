@@ -117,9 +117,12 @@
     top: 0px;
 
     &.small {
-      top: 0px
+      top: 0px;
     }
 
+    &.interrupter {
+      top: 0px;
+    }
   }
 
   .placeb-visual {

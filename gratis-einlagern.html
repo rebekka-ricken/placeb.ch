@@ -1,0 +1,116 @@
+---
+layout: content
+permalink: /gratis-einlagern/
+title: placeB im Pilatusmarkt Kriens
+excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
+---
+
+<div class="box-bg-section box-hero-bg-section hero-container">
+    <div class="section">
+        <div class="transparent-bg">
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content-wrapper small">
+
+    <div class="section section-low-padding">
+        <div class="content">
+
+            <div class="offer-form">
+
+                <h1>{{page.title}}</h1>
+
+                <h2>Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!</h2>
+
+                <p class="margin-bottom">Wir wissen, dass Platzprobleme ganz schön dringend werden können. Und deshalb
+                    verstehen wir auch,
+                    dass es Situationen gibt, in der du SOFORT Platz brauchst. Darum bieten wir dir an, dass du bis zur
+                    offiziellen Eröffnung im Februar 2017 deine Sachen bei uns gratis Zwischenlagern kannst.
+                </p>
+
+                <p>
+                    Folgende Bedingungen gelten für das Angebot “Gratis Einlagern”:
+                <ul>
+                    <li>Du reservierst telefonisch deine gewünschte Box bei uns für die Zeit nach der Eröffnung.</li>
+                    <li>Dann kannst du deine Sachen sofort in einem geschlossenen Raum im Pilatusmarkt zwischenlagern.
+                    </li>
+                    <li>Du hast begleiteten Zutritt auf Voranmeldung während den Bürozeiten.</li>
+                    <li>Auf den Zeitpunkt der offiziellen Eröffnung werden deine Sachen in deine gebuchte Box
+                        transferiert. Ab dann hast du freien, zeitlich unlimitierten Zutritt zu deiner Box
+                    </li>
+                </ul>
+
+                </p>
+
+                <div>
+                    <p class="error" id="offer-error">
+                        Bitte alle Felder ausfüllen
+                    </p>
+
+                    <p class="success" id="offer-success">
+                        Vielen Dank für deine Anfrage! Wir melden uns möglichst schnell bei dir.
+                    </p>
+                </div>
+
+                <form class="pure-form pure-form-stacked text-left" id="offer-pre-form">
+
+                    <h2 class="no-margin-bottom">Jetzt gratis Angebot nutzen.</h2>
+
+                    <fieldset>
+                        <div class="pure-control-group">
+                            <label for="name" class="dark">Vorname, Name</label>
+                            <input id="name" required name="name" type="text">
+                        </div>
+
+                        <div class="pure-control-group">
+                            <label for="email" class="dark">Email</label>
+                            <input id="email" required type="email" name="email"
+                                   placeholder="Gültige Email-Adresse eingeben">
+                        </div>
+
+                        <div class="pure-control-group">
+                            <label for="phone" class="dark">Telefon</label>
+                            <input id="phone" required type="text" name="phone"
+                                   placeholder="Gültige Telefonnummer eingeben">
+                        </div>
+
+                        <div class="pure-control-group margin-low-bottom">
+                            <label for="space" class="dark">So viel Platz brauche ich</label>
+
+                            <p>Anhaltspunkt in m2, m3 angeben, oder aufzählen, was eingelagert werden soll.</p>
+
+                        <textarea id="space" required name="space" rows="3">
+                        </textarea>
+
+                            <p>
+                                Bsp. 6 m2; 10m3; 1 Sofa (3-er), 10 Umzugskartons, 1 Schrank (3 Türen).... oder: Bitte
+                                helft mir, meinen Platzbedarf zu berechnen.
+                            </p>
+                        </div>
+                        <button type="submit" class="pure-button" id="submit-pre-offer">Jetzt gratis Angebot nutzen
+                        </button>
+
+                        <div class="meta">oder ruf uns an unter <a href="tel:+41442739191" class="green">+41 44 273 91
+                            91</a></div>
+
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+</div>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("user_uGycY6zXPXV3Cg4AV7eso");
+    })();
+
+</script>
