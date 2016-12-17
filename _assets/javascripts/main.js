@@ -263,7 +263,7 @@
                     function (response) {
                         $('#offer-success').show();
                         $('#submit-pre-offer').html('Jetzt gratis Angebot nutzen');
-                        $('#offer-pre-form/').hide();
+                        $('#offer-pre-form').hide();
 
                         $('html, body').animate({
                             scrollTop: $("#offer-success").offset().top
