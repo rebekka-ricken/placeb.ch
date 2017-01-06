@@ -285,6 +285,42 @@
 
         });
 
+
+
+        $('#submit-kmu').on('click', function (e) {
+            e.preventDefault();
+            if ($('#email').val().length && $('#name').val().length && $('#number').val().length && $('#value').val().length && $('#phone').val().length) {
+                $('#submit-kmu').html('Absenden ...');
+                $('#offer-error').hide();
+                $('input,textarea').removeClass('error');
+
+                emailjs.sendForm('default_service', 'kmu_form', 'kmu-form').then(
+                    function (response) {
+                        $('#offer-success').show();
+                        $('#submit-kmu').html('Absenden');
+                        $('#kmu-form').hide();
+
+                        $('html, body').animate({
+                            scrollTop: $("#offer-success").offset().top
+                        }, 200);
+                    },
+                    function (error) {
+                        alert('Fehler beim Absenden');
+                        $('#submit-kmu').html('Absenden');
+
+                        $('html, body').animate({
+                            scrollTop: $("#offer-error").offset().top
+                        }, 200);
+                    });
+            } else {
+                $('#offer-success').hide();
+                $('input').addClass('error');
+                $('#offer-error').show();
+            }
+
+        });
+
+
     });
 
 })();

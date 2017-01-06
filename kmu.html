@@ -1,0 +1,109 @@
+---
+layout: content
+permalink: /kmu/
+title: Anmeldung Eröffnungskampagne Luzern
+excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
+---
+
+<div class="box-bg-section box-hero-bg-section hero-container">
+    <div class="section">
+        <div class="transparent-bg">
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content-wrapper small">
+
+    <div class="section section-low-padding">
+        <div class="content">
+
+            <h1 class="is-center">{{page.title}}</h1>
+
+            <div class="offer-form">
+
+                <div class="padding-left">
+                    <p class="error" id="offer-error">
+                        Bitte alle Felder ausfüllen
+                    </p>
+
+                    <p class="success" id="offer-success">
+                        Vielen Dank! Wir werden uns in Kürze bei Ihnen melden.
+                    </p>
+                </div>
+
+                <form class="pure-form pure-form-stacked text-left" id="kmu-form">
+                    <fieldset>
+
+                        <p>Wir wollen uns an der placeB Eröffnungskampagne beteiligen. Bitte
+                            kontaktieren Sie uns:
+                        </p>
+
+                        <div class="pure-control-group">
+                            <label for="salutation" class="dark">Anrede</label>
+                            <select name="salutation" id="salutation">
+                                <option value="f">Frau</option>
+                                <option value="m">Herr</option>
+                            </select>
+                        </div>
+
+                        <div class="pure-control-group">
+                            <label for="name" class="dark">Vorname, Name</label>
+                            <input id="name" required name="name" type="text">
+                        </div>
+
+                        <div class="pure-control-group">
+                            <label for="company" class="dark">Firma</label>
+                            <input id="company" required name="company" type="text">
+                        </div>
+
+                        <div class="pure-control-group">
+                            <label for="email" class="dark">e-Mail Adresse
+                            </label>
+                            <input id="email" required type="email" name="email">
+                        </div>
+
+                        <div class="pure-control-group">
+                            <label for="phone" class="dark">Telefon</label>
+                            <input id="phone" required type="text" name="phone">
+                        </div>
+
+                        <div class="pure-control-group">
+                            <label for="number" class="dark">Geschenk Anzahl</label>
+                            <input id="number" required name="number" type="number">
+                        </div>
+
+                        <div class="pure-control-group">
+                            <label for="value" class="dark">Wert pro Geschenk</label>
+                            <input id="value" required name="value" type="text" placeholder="in CHF">
+                        </div>
+
+                        <div class="pure-control-group margin-low-bottom">
+                            <label for="notes" class="dark">Bemerkung</label>
+                        <textarea id="notes" required name="notes" rows="3">
+                        </textarea>
+
+                        </div>
+                        <button type="submit" class="pure-button" id="submit-kmu">
+                            Absenden
+                        </button>
+
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+</div>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("user_uGycY6zXPXV3Cg4AV7eso");
+    })();
+
+</script>
