@@ -289,7 +289,7 @@
 
         $('#submit-kmu').on('click', function (e) {
             e.preventDefault();
-            if ($('#email').val().length && $('#name').val().length && $('#number').val().length && $('#value').val().length && $('#phone').val().length) {
+            if ($('#email').val().length && $('#name').val().length && $('#company').val().length && $('#number').val().length && $('#value').val().length && $('#phone').val().length) {
                 $('#submit-kmu').html('Absenden ...');
                 $('#offer-error').hide();
                 $('input,textarea').removeClass('error');
