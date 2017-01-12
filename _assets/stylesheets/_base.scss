@@ -215,6 +215,12 @@ blockquote p {
   }
 }
 
+.full-width-form {
+  input, textarea {
+    width: 100%;
+  }
+}
+
 label {
   font-weight: bold;
 }

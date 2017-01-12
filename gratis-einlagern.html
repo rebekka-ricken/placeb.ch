@@ -1,7 +1,7 @@
 ---
 layout: content
 permalink: /gratis-einlagern/
-title: placeB im Pilatusmarkt Kriens
+title: Jetzt bis zur offiziellen Eröffnung gratis einlagern
 excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
 ---
 
@@ -25,14 +25,13 @@ excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
 
                 <div class="pure-u-1 pure-u-lg-3-5">
 
-                    <h2>Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!</h2>
+                    <h2><span id="location-title"></span>: Offizielle Eröffnung Frühling 2017. Für dich aber schon jetzt!</h2>
 
-                    <p class="margin-bottom">Wir wissen, dass Platzprobleme ganz schön dringend werden können. Und
+                    <p class="margin-low-bottom">Wir wissen, dass Platzprobleme ganz schön dringend werden können. Und
                         deshalb
                         verstehen wir auch,
-                        dass es Situationen gibt, in der du SOFORT Platz brauchst. Darum bieten wir dir an, dass du bis
-                        zur
-                        offiziellen Eröffnung im Februar 2017 deine Sachen bei uns gratis Zwischenlagern kannst.
+                        dass es Situationen gibt, in der du SOFORT Platz brauchst. Darum bieten wir dir an, dass du
+                        deine Sachen bei uns gratis Zwischenlagern kannst.
                     </p>
 
                     <p>
@@ -64,11 +63,18 @@ excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
                         </p>
                     </div>
 
-                    <form class="pure-form pure-form-stacked text-left padding-left" id="offer-pre-form">
+                    <form class="pure-form pure-form-stacked text-left padding-left full-width-form" id="offer-pre-form">
 
                         <h2 class="no-margin-bottom">Jetzt gratis Angebot nutzen.</h2>
 
                         <fieldset>
+
+                            <div class="pure-control-group">
+                                <label for="location" class="dark">Standort</label>
+                                <input id="location" required name="location" type="text">
+                            </div>
+
+
                             <div class="pure-control-group">
                                 <label for="name" class="dark">Vorname, Name</label>
                                 <input id="name" required name="name" type="text">
@@ -103,7 +109,8 @@ excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
                             <button type="submit" class="pure-button" id="submit-pre-offer">Jetzt gratis Angebot nutzen
                             </button>
 
-                            <div class="meta">oder ruf uns an unter <a href="tel:+41413609191" class="green">+41 41 360 91 91</a></div>
+                            <div class="meta">oder ruf uns an unter <a href="tel:+41413609191" class="green">+41 41 360
+                                91 91</a></div>
 
                         </fieldset>
                     </form>
@@ -121,6 +128,23 @@ excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
 <script type="text/javascript">
     (function () {
         emailjs.init("user_uGycY6zXPXV3Cg4AV7eso");
+    })();
+
+    function getParameterByName(name) {
+        url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    (function () {
+        var location = getParameterByName('l');
+
+        document.getElementById('location-title').innerHTML = location;
+        document.getElementById('location').value = location;
     })();
 
 </script>

@@ -1,0 +1,112 @@
+---
+layout: content
+permalink: /luzern/
+title: Der beste Standort in Luzern für deinen Lagerraum
+excerpt: Wähle aus unseren Standorten in Luzern aus.
+---
+
+<div>
+    <div class="section section-low-padding">
+        <div class="content first">
+            <h1 class="is-center">{{ page.title }}</h1>
+
+            <p class="is-center">Lagerräume von placeB schaffen dir mehr Platz für dein Leben.</p>
+
+            <h2 id="kriens">Kriens/Horw</h2>
+
+            <div class="pure-g">
+                <div class="l-box pure-u-1 pure-u-md-2-5">
+                    <a href="/kriens/" class="green">
+                        {% img "locations/kriens.jpg" alt:"Pilatus Markt" %}
+                    </a>
+                </div>
+
+                <div class="l-box pure-u-1 pure-u-md-3-5">
+                    <p class="padding-left">
+                        Der erste placeB Standort in der Zentralschweiz ist im Gebäude des Pilatusmarkt zu finden.
+                        Direkt an der Autobahn-Ausfahrt und über eine separate Anlieferrampe rund um die Uhr zugänglich.
+                    </p>
+
+                    <ul class="none-list padding-left">
+
+                        <li>
+                            <a href="/kriens/" class="green">
+                                <i class="fa fa-archive"></i>
+                                Mehr Infos zum Standort in Kriens/Horw
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a target="_blank"
+                               data-id="navigate-to"
+                               data-location="hardturmstr"
+                               href="https://www.google.ch/maps/dir//47.0180638,8.2996944/@47.0180474,8.2996381,18z"
+                               class="green track-click"><i class="fa fa-location-arrow"></i> Zum Standort
+                                navigieren</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grey-section section section-low-padding">
+        <div class="content">
+            <h2 id="emmen">Emmen</h2>
+
+            <div class="pure-g">
+
+                <div class="l-box pure-u-1 pure-u-md-3-5">
+                    <p>
+                        Am Lindenheimweg 1 in Emmen bauen wir einen neuen Standort für den Norden der Stadt Luzern. Das
+                        Gewerbegebäude liegt direkt an der Autobahn A2, in unmittelbarer Nähe des Wohncenters und
+                        verfügt über einen Warenlift mit direktem Zugang
+                    </p>
+
+                    <ul class="none-list">
+
+                        <li>
+                            <a href="/emmen/" class="green">
+                                <i class="fa fa-archive"></i>
+                                Mehr Infos zum Standort in Emmen
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a target="_blank"
+                               data-id="navigate-to"
+                               data-location="hardturmstr"
+                               href="https://www.google.ch/maps/dir//47.0761591,8.2923294/@47.0761664,8.2901408,17z"
+                               class="green track-click"><i class="fa fa-location-arrow"></i> Zum Standort
+                                navigieren</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="l-box pure-u-1 pure-u-md-2-5">
+                    <a href="/emmen/" class="green">
+                        {% img "locations/emmen.jpg" alt:"Emmen" %}
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+</div>
+
+{% comment %}
+
+<script>
+    var locationPin = "{% asset_path 'marker@2x.png' %}";
+</script>
+
+{% javascript locations %}
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+{% endcomment %}
+
