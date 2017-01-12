@@ -224,24 +224,21 @@
                 $('#submit-offer').html('Offerte bestellen ...');
                 $('#offer-error').hide();
                 $('input,textarea').removeClass('error');
+                $('#offer-form').hide();
+                $('.loader').show();
 
                 emailjs.sendForm('default_service', 'offer_form', 'offer-form').then(
                     function (response) {
+                        $('.loader').hide();
                         $('#offer-success').show();
                         $('#submit-offer').html('Offerte bestellen');
-                        $('#offer-form').hide();
-
-                        $('html, body').animate({
-                            scrollTop: $("#offer-success").offset().top
-                        }, 200);
                     },
                     function (error) {
+                        $('#offer-form').show();
+                        $('.loader').hide();
                         alert('Fehler beim Absenden');
                         $('#submit-offer').html('Offerte bestellen');
 
-                        $('html, body').animate({
-                            scrollTop: $("#offer-error").offset().top
-                        }, 200);
                     });
             } else {
                 $('#offer-success').hide();
@@ -255,28 +252,26 @@
         $('#submit-pre-offer').on('click', function (e) {
             e.preventDefault();
             if ($('#email').val().length && $('#name').val().length && $('#location').val().length && $('#space').val().length && $('#phone').val().length) {
+
                 $('#submit-pre-offer').html('Jetzt gratis Angebot nutzen ...');
                 $('#offer-error').hide();
                 $('input,textarea').removeClass('error');
+                $('.loader').show();
+                $('#offer-pre-form').hide();
 
                 emailjs.sendForm('default_service', 'offer_pre_form', 'offer-pre-form').then(
                     function (response) {
                         $('#offer-success').show();
                         $('#submit-pre-offer').html('Jetzt gratis Angebot nutzen');
-                        $('#offer-pre-form').hide();
-
-                        $('html, body').animate({
-                            scrollTop: $("#offer-success").offset().top
-                        }, 200);
+                        $('.loader').hide();
                     },
                     function (error) {
+                        $('.loader').hide();
+                        $('#offer-pre-form').show();
                         alert('Fehler beim Absenden');
                         $('#submit-pre-offer').html('Jetzt gratis Angebot nutzen');
-
-                        $('html, body').animate({
-                            scrollTop: $("#offer-error").offset().top
-                        }, 200);
                     });
+
             } else {
                 $('#offer-success').hide();
                 $('input,textarea').addClass('error');
@@ -285,32 +280,28 @@
 
         });
 
-
-
         $('#submit-kmu').on('click', function (e) {
             e.preventDefault();
             if ($('#email').val().length && $('#name').val().length && $('#company').val().length && $('#number').val().length && $('#value').val().length && $('#phone').val().length) {
                 $('#submit-kmu').html('Absenden ...');
                 $('#offer-error').hide();
                 $('input,textarea').removeClass('error');
+                $('.loader').show();
+                $('#offer-pre-form').hide();
+                $('#kmu-form').hide();
 
                 emailjs.sendForm('default_service', 'kmu_form', 'kmu-form').then(
                     function (response) {
+                        $('.loader').hide();
                         $('#offer-success').show();
                         $('#submit-kmu').html('Absenden');
-                        $('#kmu-form').hide();
 
-                        $('html, body').animate({
-                            scrollTop: $("#offer-success").offset().top
-                        }, 200);
                     },
                     function (error) {
+                        $('.loader').hide();
+                        $('#kmu-form').show();
                         alert('Fehler beim Absenden');
                         $('#submit-kmu').html('Absenden');
-
-                        $('html, body').animate({
-                            scrollTop: $("#offer-error").offset().top
-                        }, 200);
                     });
             } else {
                 $('#offer-success').hide();
