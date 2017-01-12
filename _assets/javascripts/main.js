@@ -254,7 +254,7 @@
 
         $('#submit-pre-offer').on('click', function (e) {
             e.preventDefault();
-            if ($('#email').val().length && $('#name').val().length && $('#space').val().length && $('#phone').val().length) {
+            if ($('#email').val().length && $('#name').val().length && $('#location').val().length && $('#space').val().length && $('#phone').val().length) {
                 $('#submit-pre-offer').html('Jetzt gratis Angebot nutzen ...');
                 $('#offer-error').hide();
                 $('input,textarea').removeClass('error');
