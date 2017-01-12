@@ -25,7 +25,8 @@ excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
 
                 <div class="pure-u-1 pure-u-lg-3-5">
 
-                    <h2><span id="location-title"></span>: Offizielle Eröffnung Frühling 2017. Für dich aber schon jetzt!</h2>
+                    <h2><span id="location-title"></span>Offizielle Eröffnung Frühling 2017. Für dich aber schon
+                        jetzt!</h2>
 
                     <p class="margin-low-bottom">Wir wissen, dass Platzprobleme ganz schön dringend werden können. Und
                         deshalb
@@ -39,7 +40,7 @@ excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
                     <ul>
                         <li>Du reservierst telefonisch deine gewünschte Box bei uns für die Zeit nach der Eröffnung.
                         </li>
-                        <li>Dann kannst du deine Sachen sofort in einem geschlossenen Raum im Pilatusmarkt
+                        <li>Dann kannst du deine Sachen sofort in einem geschlossenen Raum
                             zwischenlagern.
                         </li>
                         <li>Du hast begleiteten Zutritt auf Voranmeldung während den Bürozeiten.</li>
@@ -63,7 +64,8 @@ excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
                         </p>
                     </div>
 
-                    <form class="pure-form pure-form-stacked text-left padding-left full-width-form" id="offer-pre-form">
+                    <form class="pure-form pure-form-stacked text-left padding-left full-width-form"
+                          id="offer-pre-form">
 
                         <h2 class="no-margin-bottom">Jetzt gratis Angebot nutzen.</h2>
 
@@ -143,8 +145,11 @@ excerpt: "Offizielle Eröffnung im Februar 2017. Für dich aber schon jetzt!"
     (function () {
         var location = getParameterByName('l');
 
-        document.getElementById('location-title').innerHTML = location;
-        document.getElementById('location').value = location;
+        if (location) {
+            document.getElementById('location-title').innerHTML = location.concat(': ');
+            document.getElementById('location').value = location;
+        }
+
     })();
 
 </script>
