@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /impressum/
+Disallow: /*#$
 
 Sitemap: http://www.placeb.ch/sitemap.xml
